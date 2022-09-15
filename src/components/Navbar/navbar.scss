@@ -1,0 +1,39 @@
+.navbar {
+  max-width: 95%;
+  margin: auto;
+
+  .nav__container {
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+    &,
+    .nav-items {
+      align-items: center;
+      display: flex;
+    }
+
+    .nav-logo {
+      width: 10rem;
+    }
+
+    .nav-items {
+      gap: 2rem;
+      font-family: "Shadows Into Light Two", cursive;
+      font-size: 1.5rem;
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .nav-bottom {
+    width: 100%;
+  }
+
+  .nav-comment {
+    text-align: center;
+    margin: 0;
+  }
+}
