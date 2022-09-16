@@ -16,13 +16,39 @@ export const Home = () => {
             constantly looking to learn new things everyday.
           </p>
 
-          <button className="std-btn">More About Me!</button>
+          <button className="std-btn red">More About Me!</button>
 
           <span className="tag-line">
             I Create better experience for{" "}
             <span className="slashed-out">Users</span>
             <span className="floating-text">People</span>
           </span>
+        </section>
+
+        <section id="chat-with-me" className="chat-with-me">
+          <div className="overlay-title-container">
+            <img
+              className="bg-logo"
+              src="./images/AboutBg.svg"
+              alt="AboutLogo"
+            />
+            <span className="overlay-title">Chat with me about..</span>
+          </div>
+
+          <div className="interests-container">
+            {/* Interests Mapping through Data */}
+          </div>
+        </section>
+
+        <section id="my-projects" className="my-projects">
+          <div className="overlay-title-container">
+            <img
+              className="bg-logo"
+              src="./images/UI-UX-logo.svg"
+              alt="AboutLogo"
+            />
+            <span className="overlay-title">My Projects</span>
+          </div>
         </section>
       </div>
     </div>

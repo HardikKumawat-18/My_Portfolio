@@ -1,4 +1,5 @@
 .home {
+  // Intro
   .red-text {
     color: red;
   }
@@ -26,6 +27,12 @@
 
   .std-btn {
     margin: 2rem auto;
+
+    &,
+    .red {
+      background-color: #e84a42;
+      color: white;
+    }
   }
 
   .tag-line {
@@ -37,6 +44,7 @@
     margin: auto;
     .slashed-out {
       text-decoration: line-through;
+      text-decoration-color: red;
     }
 
     .floating-text {
@@ -45,5 +53,11 @@
       right: -2rem;
       transform: rotate(20deg);
     }
+  }
+
+  // Chat With Me
+
+  #intro {
+    margin-bottom: 3rem;
   }
 }

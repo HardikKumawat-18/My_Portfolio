@@ -1,0 +1,38 @@
+export const projectsData = [
+  {
+    thumbnailURL: "",
+    thumbnailImg: "",
+    logoURL: "",
+    logoImg: "",
+    title: "",
+    description: "",
+    btnColor: "",
+  },
+  {
+    thumbnailURL: "",
+    thumbnailImg: "",
+    logoURL: "",
+    logoImg: "",
+    title: "",
+    description: "",
+    btnColor: "",
+  },
+  {
+    thumbnailURL: "",
+    thumbnailImg: "",
+    logoURL: "",
+    logoImg: "",
+    title: "",
+    description: "",
+    btnColor: "",
+  },
+  {
+    thumbnailURL: "",
+    thumbnailImg: "",
+    logoURL: "",
+    logoImg: "",
+    title: "",
+    description: "",
+    btnColor: "",
+  },
+];
