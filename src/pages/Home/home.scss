@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    height: 80vh;
   }
 
   .std-btn {
@@ -41,7 +42,7 @@
     text-align: center;
     position: relative;
     width: fit-content;
-    margin: auto;
+    margin: 4rem auto;
     .slashed-out {
       text-decoration: line-through;
       text-decoration-color: red;
@@ -56,8 +57,17 @@
   }
 
   // Chat With Me
+  .interest-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
 
-  #intro {
-    margin-bottom: 3rem;
+  // My Projects
+  .project-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 }

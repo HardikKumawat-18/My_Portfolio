@@ -1,6 +1,15 @@
+import { useEffect } from "react";
 import "./home.scss";
+import { InterestCard, ProjectCard } from "../../components";
+import { interestsData, projectsData } from "../../data";
 
 export const Home = () => {
+  let location = window.location.hash;
+
+  useEffect(() => {
+    console.log(location);
+  });
+
   return (
     <div className="home">
       <div className="max-w-container">
@@ -35,8 +44,10 @@ export const Home = () => {
             <span className="overlay-title">Chat with me about..</span>
           </div>
 
-          <div className="interests-container">
-            {/* Interests Mapping through Data */}
+          <div className="interest-card-container">
+            {interestsData.map((item, index) => {
+              return <InterestCard cardData={item} key={index} />;
+            })}
           </div>
         </section>
 
@@ -48,6 +59,12 @@ export const Home = () => {
               alt="AboutLogo"
             />
             <span className="overlay-title">My Projects</span>
+          </div>
+
+          <div className="project-card-container">
+            {projectsData.map((item, index) => {
+              return <ProjectCard cardData={item} key={index} />;
+            })}
           </div>
         </section>
       </div>

@@ -1,0 +1,27 @@
+.project-card {
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 40px;
+  overflow: hidden;
+  height: 18rem;
+  &,
+  .content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .project-img {
+    width: 30rem;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content {
+    padding: 2rem;
+    flex-direction: column;
+
+    .std-btn {
+      margin: 2rem 0;
+    }
+  }
+}

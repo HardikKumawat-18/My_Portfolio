@@ -1,6 +1,6 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./pages";
+import { Home, ProjectInfo } from "./pages";
 import { WithoutURL, WithURL } from "./components";
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
           <Route element={<WithURL />}>
             <Route index path="/" element={<Home />} />
           </Route>
-          <Route element={<WithoutURL />}></Route>
+          <Route element={<WithoutURL />}>
+            <Route path="/project/:id" element={<ProjectInfo />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

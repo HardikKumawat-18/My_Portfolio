@@ -1,9 +1,12 @@
 .with-url,
 .without-url {
   background-image: url("../../../public/images/GridTop.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .url-bar {
-  width: 100%;
+  position: relative;
+  width: 95%;
+  margin-left: 3rem;
 }

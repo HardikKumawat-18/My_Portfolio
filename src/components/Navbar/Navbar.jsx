@@ -9,8 +9,8 @@ export const Navbar = () => {
           <img className="nav-logo" src="./images/hrdkLogo.svg" alt="logo" />
         </Link>
         <div className="nav-items">
-          <Link to="/#about">About</Link>
-          <Link to="/#projects">Projects</Link>
+          <Link to="/#chat-with-me">About</Link>
+          <Link to="/#my-projects">Projects</Link>
           <Link to="/#connect-now">Connect Now</Link>
         </div>
       </div>

@@ -1,0 +1,21 @@
+.interest-card {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+
+  .interest-logo {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+  }
+
+  .content {
+    .interest-title {
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+    .interest-desc {
+      font-weight: 300;
+    }
+  }
+}
