@@ -1,9 +1,10 @@
-import "./navbar.scss";
 import { Link } from "react-router-dom";
+import "../Navbar/navbar.scss";
+import "./footer.scss";
 
-export const Navbar = () => {
+export const Footer = () => {
   return (
-    <div className="navbar">
+    <div className="footer">
       <div className="nav__container">
         <Link to="/">
           <img className="nav-logo" src="/images/hrdkLogo.svg" alt="logo" />
@@ -11,11 +12,17 @@ export const Navbar = () => {
         <div className="nav-items">
           <Link to="/#chat-with-me">About</Link>
           <Link to="/#my-projects">Projects</Link>
-          <Link to="/#connect-now">Connect Now</Link>
         </div>
+        <img
+          className="scroll-top"
+          src="/images/backToTop.svg"
+          alt="backToTop"
+          onClick={() => {
+            console.log(window.scrollTo(0, 0));
+          }}
+        />
+        <h5 className="copy-right">&copy;Hardik Kumawat</h5>
       </div>
-      <img className="nav-bottom" src="/images/NavBottom.svg" alt="" />
-      <h4 className="nav-comment">"Navbar"</h4>
     </div>
   );
 };

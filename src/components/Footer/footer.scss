@@ -1,0 +1,28 @@
+.footer {
+  max-width: unset;
+  background-image: url("../../../public/images/FooterBg.png");
+  background-position: bottom;
+  background-size: (100%);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 23rem 0 0;
+  .nav__container {
+    max-width: 95%;
+    margin: auto;
+  }
+  .copy-right {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    margin: auto;
+    width: 8rem;
+  }
+  .scroll-top {
+    cursor: pointer;
+    position: absolute;
+    right: 4rem;
+    width: 3rem;
+    transform: translateY(-5rem);
+  }
+}
