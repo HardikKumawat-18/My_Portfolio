@@ -1,0 +1,33 @@
+.project-info {
+  .sub-title {
+    font-size: 1.5rem;
+  }
+  .intro {
+    .flex-container {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .left {
+        flex: 2;
+        .logo {
+          width: 8rem;
+        }
+        .title {
+          font-size: 4rem;
+          font-weight: 700;
+        }
+        .sub-title {
+          font-weight: 300;
+          color: grey;
+        }
+      }
+      .mock-img {
+        flex: 3;
+        width: 50rem;
+      }
+    }
+  }
+}
