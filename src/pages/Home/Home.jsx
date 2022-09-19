@@ -61,7 +61,7 @@ export const Home = () => {
           </div>
         </section>
 
-        <section id="contact-me" className="contact-me">
+        <section id="connect-now" className="connect-now">
           <div className="contact-form">
             <div className="wifi-symbol">
               <div className="wifi-circle first"></div>
@@ -78,9 +78,14 @@ export const Home = () => {
                   }}
                   className="toggle-track"
                 >
-                  <div onClick={() => {
-                    document.querySelector(".toggle-track").classList.toggle("active");
-                  }} className="toggle-btn"></div>
+                  <div
+                    onClick={() => {
+                      document
+                        .querySelector(".toggle-track")
+                        .classList.toggle("active");
+                    }}
+                    className="toggle-btn"
+                  ></div>
                 </div>
 
                 <img

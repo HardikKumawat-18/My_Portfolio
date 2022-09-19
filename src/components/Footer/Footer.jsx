@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../Navbar/navbar.scss";
 import "./footer.scss";
 
@@ -6,12 +5,12 @@ export const Footer = () => {
   return (
     <div className="footer">
       <div className="nav__container">
-        <Link to="/">
+        <a href="/">
           <img className="nav-logo" src="/images/hrdkLogo.svg" alt="logo" />
-        </Link>
+        </a>
         <div className="nav-items">
-          <Link to="/#chat-with-me">About</Link>
-          <Link to="/#my-projects">Projects</Link>
+          <a href="/#chat-with-me">About</a>
+          <a href="/#my-projects">Projects</a>
         </div>
         <img
           className="scroll-top"

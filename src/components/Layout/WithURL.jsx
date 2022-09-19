@@ -8,7 +8,7 @@ export const WithURL = () => {
   return (
     <>
       <div className="with-url">
-        <img className="url-bar" src="./images/URLDesktop.svg" alt="" />
+        <img className="url-bar" src="./images/URLDesktop.svg" alt="url-img" />
         <Navbar />
         <Outlet />
       </div>

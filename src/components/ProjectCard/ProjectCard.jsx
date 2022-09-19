@@ -26,7 +26,7 @@ export const ProjectCard = ({ cardData }) => {
           src={logoURL || `./images/${logoImg}`}
           alt="project-logo"
         />
-        <h3 className="project-title">{title}</h3>
+        <h3 className="title">{title}</h3>
         <h4 className="project-sub-title">{Subtitle}</h4>
         <p className="desc">{description}</p>
         <button className="std-btn" style={{ backgroundColor: btnColor }}>

@@ -11,7 +11,7 @@ export const InterestCard = ({ cardData }) => {
         alt=""
       />
       <div className="content">
-        <h3 className="interest-title">{title}</h3>
+        <h3 className="title">{title}</h3>
         <p className="interest-desc">{description}</p>
       </div>
     </div>

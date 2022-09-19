@@ -16,7 +16,8 @@ export const projectsData = [
     logoImg: "BookxchangeLogo.png",
     title: "Book Xchange",
     Subtitle: "Interaction & Motion Design",
-    description: "Designed interactions for a book rental cum sale app (pet project)",
+    description:
+      "Designed interactions for a book rental cum sale app (pet project)",
     btnColor: "#0FABD8",
   },
   {
@@ -26,17 +27,18 @@ export const projectsData = [
     logoImg: "MycardLogo.png",
     title: "MyCard",
     Subtitle: "Interaction & Motion Design",
-    description: "Designed interactions for a personal finance dashboard (pet project)",
+    description:
+      "Designed interactions for a personal finance dashboard (pet project)",
     btnColor: "#FFA935",
   },
   {
     thumbnailURL: "",
     thumbnailImg: "PlantaeBanner.png",
-    logoURL: "", 
+    logoURL: "",
     logoImg: "PlantaeLogo.png",
     title: "Plantae.",
     Subtitle: "UI/UX Design",
     description: "An online plant nursery (Portfolio Project)",
-    btnColor: "",
+    btnColor: "#468B5B",
   },
 ];

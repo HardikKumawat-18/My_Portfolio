@@ -31,10 +31,25 @@
 
   .nav-bottom {
     width: 100%;
+    padding-bottom: 1rem;
   }
+}
 
-  .nav-comment {
-    text-align: center;
-    margin: 0;
+.navbar {
+  max-width: 100%;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0);
+  transform: translateY(0);
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out 0.2s;
+
+  &.bg-fade {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  &.toggle-effect {
+    transform: translateY(-15rem);
   }
 }

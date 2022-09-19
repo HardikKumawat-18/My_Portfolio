@@ -1,59 +1,62 @@
 .home {
   // Intro
-  .red-text {
-    color: red;
-  }
-
-  .title {
-    font-size: 3rem;
-    font-weight: 400;
-    margin: 0;
-  }
-
-  .sub-title {
-    font-weight: 200;
-    font-size: 1.2rem;
-  }
-
-  .vsmalltext {
-    font-weight: 200;
-  }
-
   .intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.2rem;
     height: 70vh;
-  }
-
-  .std-btn {
-    margin: 2rem auto;
-
-    &,
-    .red {
-      background-color: #e84a42;
-      color: white;
+    .red-text {
+      color: red;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
-  }
-
-  .tag-line {
-    font-size: 1.5rem;
-    font-family: "Shadows Into Light Two", cursive;
-    text-align: center;
-    position: relative;
-    width: fit-content;
-    margin: 4rem auto;
-    .slashed-out {
-      text-decoration: line-through;
-      text-decoration-color: red;
+    .title {
+      font-size: 5rem;
+      font-weight: 500;
+      margin: 0;
     }
 
-    .floating-text {
-      position: absolute;
-      top: -1.5rem;
-      right: -2rem;
-      transform: rotate(20deg);
+    .sub-title {
+      font-weight: 200;
+      font-size: 1.6rem;
+    }
+
+    .vsmalltext {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: grey;
+      margin-bottom: 1rem;
+    }
+
+    .std-btn {
+      margin: 2rem auto;
+
+      &,
+      .red {
+        background-color: #e84a42;
+        color: white;
+      }
+    }
+
+    .tag-line {
+      font-size: 2.5rem;
+      font-family: "Shadows Into Light Two", cursive;
+      text-align: center;
+      position: relative;
+      width: fit-content;
+      margin: 4rem auto;
+      .slashed-out {
+        text-decoration: line-through;
+        text-decoration-color: red;
+      }
+
+      .floating-text {
+        position: absolute;
+        top: -2.5rem;
+        right: -4rem;
+        transform: rotate(20deg);
+      }
     }
   }
 
@@ -61,7 +64,7 @@
   .interest-card-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     margin: 2rem 0;
   }
 
@@ -74,7 +77,7 @@
   }
 
   // Contact Me
-  .contact-me {
+  .connect-now {
     .contact-form {
       position: relative;
 
@@ -97,6 +100,7 @@
         position: relative;
 
         .upper {
+          align-items: center;
           width: fit-content;
           display: flex;
           justify-content: flex-start;
@@ -108,13 +112,25 @@
             right: 5rem;
             top: -3rem;
           }
+          h3 {
+            font-size: 2rem;
+            font-family: "Shadows Into Light Two", cursive;
+          }
         }
         .lower {
+          .title {
+            font-size: 3rem;
+            font-weight: 500;
+          }
           h2 {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
           }
           .blue-text {
-            color: #6bc0f9;
+            color: #47a8ea;
+          }
+          .sub-title {
+            font-weight: 300;
+            font-size: 1.5rem;
           }
         }
 
@@ -176,6 +192,6 @@
 
   #chat-with-me,
   #my-projects {
-    margin-bottom: 8rem;
+    margin-bottom: 15rem;
   }
 }

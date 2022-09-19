@@ -1,21 +1,42 @@
 import "./navbar.scss";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export const Navbar = () => {
+  useEffect(() => {
+    let navbar = document.querySelector(".navbar");
+    let initPos = 0;
+    const handleScroll = () => {
+      let currPos = window.scrollY;
+      if (currPos > initPos && currPos >= 200) {
+        navbar.classList.add("bg-fade", "toggle-effect");
+        initPos = currPos;
+      } else if (currPos < 200) {
+        navbar.classList.remove("bg-fade", "toggle-effect");
+      } else {
+        navbar.classList.remove("toggle-effect");
+        initPos = currPos;
+      }
+    };
+
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <div className="navbar">
       <div className="nav__container">
-        <Link to="/">
+        <a href="/">
           <img className="nav-logo" src="/images/hrdkLogo.svg" alt="logo" />
-        </Link>
+        </a>
         <div className="nav-items">
-          <Link to="/#chat-with-me">About</Link>
-          <Link to="/#my-projects">Projects</Link>
-          <Link to="/#connect-now">Connect Now</Link>
+          <a href="/#chat-with-me">About</a>
+          <a href="/#my-projects">Projects</a>
+          <a href="/#connect-now">Connect Now</a>
         </div>
       </div>
       <img className="nav-bottom" src="/images/NavBottom.svg" alt="" />
-      <h4 className="nav-comment">"Navbar"</h4>
     </div>
   );
 };

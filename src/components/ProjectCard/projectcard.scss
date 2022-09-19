@@ -19,7 +19,11 @@
   .content {
     padding: 2rem;
     flex-direction: column;
-
+    .project-sub-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: grey;
+    }
     .std-btn {
       margin: 2rem 0;
     }
