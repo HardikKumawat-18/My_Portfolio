@@ -5,6 +5,7 @@ import { InterestCard } from "./InterestCard/InterestCard";
 import { ProjectCard } from "./ProjectCard/ProjectCard";
 import { FeedbackCard } from "./FeedbackCard/FeedbackCard";
 import { ConnectNow } from "./ConnectNow/ConnectNow";
+import { Carousel, CarouselItem } from "./Carousel/Carousel";
 
 export {
   Navbar,
@@ -14,4 +15,6 @@ export {
   ProjectCard,
   FeedbackCard,
   ConnectNow,
+  Carousel,
+  CarouselItem,
 };

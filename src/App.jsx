@@ -1,7 +1,7 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, ProjectInfo } from "./pages";
-import { WithoutURL, WithURL } from "./components";
+import { Carousel, WithoutURL, WithURL } from "./components";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
           </Route>
           <Route element={<WithoutURL />}>
             <Route path="/project/:id" element={<ProjectInfo />} />
+            <Route path="/carousel" element={<Carousel />} />
           </Route>
         </Routes>
       </BrowserRouter>

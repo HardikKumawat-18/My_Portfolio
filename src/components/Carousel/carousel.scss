@@ -1,0 +1,33 @@
+.carousel {
+  overflow: hidden;
+
+  .carousel-track {
+    white-space: nowrap;
+    transition: transform 0.3s;
+  }
+
+  .carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .carousel-img {
+      width: 70%;
+    }
+  }
+
+  .indicators {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    height: 1rem;
+    .carousel-btn {
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: grey;
+      width: 0.25rem;
+      height: 0.5rem;
+    }
+  }
+}

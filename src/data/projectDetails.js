@@ -31,27 +31,27 @@ export const projects = {
     ],
     designProcess: [
       {
-        pictureImg: "",
+        pictureImg: "DesignProcess1.png",
         pictureURL: "",
       },
       {
-        pictureImg: "",
+        pictureImg: "DesignProcess2.png",
         pictureURL: "",
       },
       {
-        pictureImg: "",
+        pictureImg: "DesignProcess3.png",
         pictureURL: "",
       },
       {
-        pictureImg: "",
+        pictureImg: "DesignProcess1.png",
         pictureURL: "",
       },
       {
-        pictureImg: "",
+        pictureImg: "DesignProcess2.png",
         pictureURL: "",
       },
       {
-        pictureImg: "",
+        pictureImg: "DesignProcess3.png",
         pictureURL: "",
       },
     ],

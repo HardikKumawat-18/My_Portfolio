@@ -1,5 +1,10 @@
 import "./projectinfo.scss";
-import { ConnectNow, FeedbackCard } from "../../components";
+import {
+  ConnectNow,
+  FeedbackCard,
+  Carousel,
+  CarouselItem,
+} from "../../components";
 import { useParams } from "react-router-dom";
 import { projects } from "../../data";
 
@@ -52,7 +57,20 @@ export const ProjectInfo = () => {
 
         <section id="design-process" className="design-process">
           <h2 className="sub-title">My Design Process</h2>
-          {/* Carousel */}
+          <Carousel>
+            {projectData.designProcess.map((item, index) => {
+              let { pictureImg } = item;
+              return (
+                <CarouselItem key={index}>
+                  <img
+                    className="carousel-img"
+                    src={`/images/${pictureImg}`}
+                    alt=""
+                  />
+                </CarouselItem>
+              );
+            })}
+          </Carousel>
 
           <h2 className="sub-title">User Research</h2>
           <p className="desc">
