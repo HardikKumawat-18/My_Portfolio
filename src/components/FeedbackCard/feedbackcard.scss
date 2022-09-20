@@ -1,0 +1,20 @@
+.feedback-card {
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2rem;
+  width: 80%;
+  .user-name,
+  .feedback {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .user-name {
+    font-weight: 600;
+  }
+
+  &.flex-container {
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

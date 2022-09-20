@@ -1,15 +1,20 @@
 .project-info {
   .sub-title {
     font-size: 1.5rem;
+    font-weight: 300;
   }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .intro {
     .flex-container {
       align-items: flex-start;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
       gap: 2rem;
-
+      margin: 3rem 0;
       .left {
         flex: 2;
         .logo {
@@ -20,14 +25,53 @@
           font-weight: 700;
         }
         .sub-title {
-          font-weight: 300;
           color: grey;
         }
       }
       .mock-img {
         flex: 3;
-        width: 50rem;
+        width: 65%;
       }
     }
+  }
+
+  .over-view {
+    margin: 5rem 0;
+    .flex-container {
+      gap: 4rem;
+      .content-box {
+        width: 40%;
+        .sub-title {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  .design-process,
+  .prototyping {
+    .sub-title {
+      margin: 8rem 0 2rem;
+    }
+  }
+
+  .design-process {
+    .flex-container {
+      gap: 4rem;
+      div {
+        flex: 1;
+      }
+    }
+
+    .user-journey-img {
+      cursor: pointer;
+      display: flex;
+      width: 60%;
+      margin: auto;
+    }
+  }
+
+  .prototyping {
+    margin-bottom: 16rem;
   }
 }
