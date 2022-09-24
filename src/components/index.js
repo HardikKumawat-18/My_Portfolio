@@ -6,6 +6,7 @@ import { ProjectCard } from "./ProjectCard/ProjectCard";
 import { FeedbackCard } from "./FeedbackCard/FeedbackCard";
 import { ConnectNow } from "./ConnectNow/ConnectNow";
 import { Carousel, CarouselItem } from "./Carousel/Carousel";
+import { HorizontalDrag } from "./HorizontalDrag/HorizontalDrag";
 
 export {
   Navbar,
@@ -17,4 +18,5 @@ export {
   ConnectNow,
   Carousel,
   CarouselItem,
+  HorizontalDrag,
 };

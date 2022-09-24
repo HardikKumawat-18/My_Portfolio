@@ -4,6 +4,7 @@ import {
   FeedbackCard,
   Carousel,
   CarouselItem,
+  HorizontalDrag,
 } from "../../components";
 import { useParams } from "react-router-dom";
 import { projects } from "../../data";
@@ -119,6 +120,7 @@ export const ProjectInfo = () => {
         <section id="prototyping" className="prototyping">
           <h2 className="sub-title">Prototyping</h2>
           <h2 className="sub-title">Wireframes</h2>
+          <HorizontalDrag slides={projectData.wireframes} />
           <h2 className="sub-title">High Fidelity Prototype</h2>
           <h2 className="sub-title">Prototype Feedback</h2>
           <div className="feedback-container">

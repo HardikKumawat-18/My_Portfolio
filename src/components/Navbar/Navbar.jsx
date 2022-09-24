@@ -7,10 +7,10 @@ export const Navbar = () => {
     let initPos = 0;
     const handleScroll = () => {
       let currPos = window.scrollY;
-      if (currPos > initPos && currPos >= 200) {
+      if (currPos > initPos && currPos >= 150) {
         navbar.classList.add("bg-fade", "toggle-effect");
         initPos = currPos;
-      } else if (currPos < 200) {
+      } else if (currPos < 150) {
         navbar.classList.remove("bg-fade", "toggle-effect");
       } else {
         navbar.classList.remove("toggle-effect");

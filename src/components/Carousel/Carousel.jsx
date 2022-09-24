@@ -16,7 +16,7 @@ export const Carousel = ({ children }) => {
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = Children.count(children) - 1;
-    } else if (newIndex > Children.count(children)) {
+    } else if (newIndex >= Children.count(children)) {
       newIndex = 0;
     }
 

@@ -79,7 +79,20 @@ export const projects = {
         pictureURL: "",
       },
     ],
-    wireframes: ["", "", "", ""],
+    wireframes: [
+      "docup1.png",
+      "docup2.png",
+      "docup3.png",
+      "docup4.png",
+      "docup1.png",
+      "docup2.png",
+      "docup3.png",
+      "docup4.png",
+      "docup1.png",
+      "docup2.png",
+      "docup3.png",
+      "docup4.png",
+    ],
     highFidelityPrototype: ["", "", "", ""],
     prototypeFeedback: [
       {

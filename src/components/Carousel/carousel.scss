@@ -17,17 +17,21 @@
   }
 
   .indicators {
-    align-items: center;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    height: 1rem;
     .carousel-btn {
       cursor: pointer;
       border-radius: 50%;
-      background-color: grey;
-      width: 0.25rem;
-      height: 0.5rem;
+      background-color: rgb(185, 184, 184);
+      border: none;
+      width: 8px;
+      height: 8px;
+      padding: 1px;
+      margin: 0 5px;
+
+      &.active {
+        background-color: grey;
+      }
     }
   }
 }
