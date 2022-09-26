@@ -1,7 +1,7 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, ProjectInfo } from "./pages";
-import { Carousel, WithoutURL, WithURL } from "./components";
+import { Home, ProjectTemplate1, ProjectTemplate2 } from "./pages";
+import { WithoutURL, WithURL } from "./components";
 
 function App() {
   return (
@@ -12,8 +12,13 @@ function App() {
             <Route index path="/" element={<Home />} />
           </Route>
           <Route element={<WithoutURL />}>
-            <Route path="/project/:id" element={<ProjectInfo />} />
-            <Route path="/carousel" element={<Carousel />} />
+            <Route path="project">
+              <Route path="ui-ux/:id" element={<ProjectTemplate1 />} />
+              <Route
+                path="interaction-motion/:id"
+                element={<ProjectTemplate2 />}
+              />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>

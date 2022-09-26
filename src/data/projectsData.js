@@ -4,6 +4,7 @@ export const projectsData = [
     thumbnailImg: "DocupBanner.png",
     logoURL: "",
     logoImg: "DocupLogo.png",
+    projectType: "ui-ux",
     title: "DocUp",
     Subtitle: "A UI/UX Case Study",
     description: "A mobile first app for all round medical services",
@@ -14,6 +15,7 @@ export const projectsData = [
     thumbnailImg: "BookxchangeBanner.png",
     logoURL: "",
     logoImg: "BookxchangeLogo.png",
+    projectType: "interaction-motion",
     title: "Book Xchange",
     Subtitle: "Interaction & Motion Design",
     description:
@@ -25,6 +27,7 @@ export const projectsData = [
     thumbnailImg: "MycardBanner.png",
     logoURL: "",
     logoImg: "MycardLogo.png",
+    projectType: "interaction-motion",
     title: "MyCard",
     Subtitle: "Interaction & Motion Design",
     description:
@@ -36,6 +39,7 @@ export const projectsData = [
     thumbnailImg: "PlantaeBanner.png",
     logoURL: "",
     logoImg: "PlantaeLogo.png",
+    projectType: "ui-ux",
     title: "Plantae.",
     Subtitle: "UI/UX Design",
     description: "An online plant nursery (Portfolio Project)",

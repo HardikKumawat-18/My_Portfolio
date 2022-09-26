@@ -1,11 +1,15 @@
 import "./projectcard.scss";
+import { useNavigate } from "react-router-dom";
 
 export const ProjectCard = ({ cardData }) => {
+  let navigate = useNavigate();
+
   const {
     thumbnailURL,
     thumbnailImg,
     logoURL,
     logoImg,
+    projectType,
     title,
     Subtitle,
     description,
@@ -29,7 +33,13 @@ export const ProjectCard = ({ cardData }) => {
         <h3 className="title">{title}</h3>
         <h4 className="project-sub-title">{Subtitle}</h4>
         <p className="desc">{description}</p>
-        <button className="std-btn" style={{ backgroundColor: btnColor }}>
+        <button
+          onClick={() => {
+            navigate(`project/${projectType}/${title.toLowerCase()}`);
+          }}
+          className="std-btn"
+          style={{ backgroundColor: btnColor }}
+        >
           View Project
         </button>
       </div>

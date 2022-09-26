@@ -1,0 +1,39 @@
+@import "../ProjectTemplate1/projecttemplate.scss";
+
+.project-info {
+  .screens-container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 3rem 0 5rem;
+    padding: 2rem 1rem;
+    .screen {
+      width: 17rem;
+    }
+  }
+
+  .motion-design {
+    margin: 0 0 15rem;
+    .container {
+      align-items: center;
+      display: flex;
+
+      .left {
+        flex: 1;
+        h1 {
+          font-size: 4rem;
+          font-weight: 600;
+          span {
+            color: #fa7c48;
+            font-weight: 400;
+          }
+        }
+      }
+      .right {
+        flex: 2;
+      }
+    }
+  }
+}

@@ -93,7 +93,22 @@ export const projects = {
       "docup3.png",
       "docup4.png",
     ],
-    highFidelityPrototype: ["", "", "", ""],
+    highFidelityPrototype: [
+      "DocUp_Bookings.png",
+      "DocUp_Call.png",
+      "DocUp_Chat.png",
+      "DocUp_CreateAnAccount.png",
+      "DocUp_Doctor.png",
+      "DocUp_DoctorInfo.png",
+      "DocUp_HomeScreen.png",
+      "DocUp_Hospitals.png",
+      "DocUp_LandingPage.png",
+      "DocUp_Location.png",
+      "DocUp_LoginScreen.png",
+      "DocUp_MedicalStore.png",
+      "DocUp_Saved.png",
+      "DocUp_Search.png",
+    ],
     prototypeFeedback: [
       {
         userProfile: "",

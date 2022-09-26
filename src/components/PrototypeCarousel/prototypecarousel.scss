@@ -1,0 +1,44 @@
+.prototype-carousel {
+  .track-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    .phone-img {
+      position: absolute;
+      height: 640px;
+      margin: auto;
+      top: 2.5rem;
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    .track {
+      height: 600px;
+      align-items: center;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      transition: transform 0.5s ease-in-out;
+      .slide {
+        width: 18rem;
+        flex-shrink: 0;
+        opacity: 0.5;
+        transition: transform 0.4s ease-in-out;
+        transform: scale(0.9);
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1);
+        }
+        &.active {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+}

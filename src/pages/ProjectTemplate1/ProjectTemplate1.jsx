@@ -1,17 +1,23 @@
-import "./projectinfo.scss";
+import "./projecttemplate.scss";
 import {
   ConnectNow,
   FeedbackCard,
   Carousel,
   CarouselItem,
   HorizontalDrag,
+  PrototypeCarousel,
 } from "../../components";
 import { useParams } from "react-router-dom";
 import { projects } from "../../data";
+import { useEffect } from "react";
 
-export const ProjectInfo = () => {
+export const ProjectTemplate1 = () => {
   const { id } = useParams();
   const { [id]: projectData } = projects;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <div className="project-info">
@@ -122,6 +128,7 @@ export const ProjectInfo = () => {
           <h2 className="sub-title">Wireframes</h2>
           <HorizontalDrag slides={projectData.wireframes} />
           <h2 className="sub-title">High Fidelity Prototype</h2>
+          <PrototypeCarousel slides={projectData.highFidelityPrototype} />
           <h2 className="sub-title">Prototype Feedback</h2>
           <div className="feedback-container">
             <FeedbackCard />
