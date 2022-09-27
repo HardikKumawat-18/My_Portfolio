@@ -1,0 +1,30 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.427);
+  cursor: pointer;
+  height: 100vh;
+  left: 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+
+  &,
+  .modal-inner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-inner {
+    border-radius: 12px;
+    background-color: white;
+    cursor: default;
+    overflow: hidden;
+    padding: 1rem;
+    width: 90%;
+    height: 90%;
+    img {
+      height: 95%;
+    }
+  }
+}

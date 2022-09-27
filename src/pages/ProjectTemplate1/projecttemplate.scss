@@ -50,6 +50,11 @@
 
   .design-process,
   .prototyping {
+    h2 {
+      &:first-child {
+        text-align: center;
+      }
+    }
     .sub-title {
       margin: 8rem 0 2rem;
     }

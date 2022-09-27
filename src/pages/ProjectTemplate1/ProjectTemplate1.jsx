@@ -6,18 +6,22 @@ import {
   CarouselItem,
   HorizontalDrag,
   PrototypeCarousel,
+  Modal,
 } from "../../components";
 import { useParams } from "react-router-dom";
 import { projects } from "../../data";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const ProjectTemplate1 = () => {
-  const { id } = useParams();
-  const { [id]: projectData } = projects;
+  const { projectName } = useParams();
+  const { uiUx } = projects;
+  const { [projectName]: projectData } = uiUx;
+  const [modalBool, setModalBool] = useState(false);
+  const [imgSrc, setImgSrc] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
 
   return (
     <div className="project-info">
@@ -115,18 +119,35 @@ export const ProjectTemplate1 = () => {
             </div>
           </div>
 
-          <h2 className="sub-title">User Journey</h2>
-          <img
-            className="user-journey-img"
-            src="/images/DocUpUserJourney.png"
-            alt="User Journey"
-          />
+          {projectData.userJourney && (
+            <>
+              <h2 className="sub-title">User Journey</h2>
+              {projectData.userJourney.map((item, index) => {
+                return (
+                  <img
+                    className="user-journey-img"
+                    src={item.pictureImg || item.pictureURL}
+                    alt="User Journey"
+                    key={index}
+                    onClick={() => {
+                      setImgSrc(`${item.pictureImg || item.pictureURL}`);
+                      setModalBool(true);
+                    }}
+                  />
+                );
+              })}
+            </>
+          )}
         </section>
 
         <section id="prototyping" className="prototyping">
           <h2 className="sub-title">Prototyping</h2>
           <h2 className="sub-title">Wireframes</h2>
-          <HorizontalDrag slides={projectData.wireframes} />
+          <HorizontalDrag
+            slides={projectData.wireframes}
+            modalBool={setModalBool}
+            imgSrc={setImgSrc}
+          />
           <h2 className="sub-title">High Fidelity Prototype</h2>
           <PrototypeCarousel slides={projectData.highFidelityPrototype} />
           <h2 className="sub-title">Prototype Feedback</h2>
@@ -137,6 +158,7 @@ export const ProjectTemplate1 = () => {
 
         <ConnectNow />
       </div>
+      {modalBool && <Modal imgSrc={imgSrc} modalBool={setModalBool} />}
     </div>
   );
 };

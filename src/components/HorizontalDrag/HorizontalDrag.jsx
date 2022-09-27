@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./horizontaldrag.scss";
 
-export const HorizontalDrag = ({ slides }) => {
+export const HorizontalDrag = ({ slides, modalBool, imgSrc }) => {
   useEffect(() => {
     const slider = document.querySelector(`.track`);
     let isDown = false;
@@ -51,6 +51,10 @@ export const HorizontalDrag = ({ slides }) => {
               className="slide"
               src={`/images/wireframes/${slide}`}
               alt="wireframe"
+              onClick={() => {
+                imgSrc(`/images/wireframes/${slide}`);
+                modalBool(true);
+              }}
             />
           );
         })}

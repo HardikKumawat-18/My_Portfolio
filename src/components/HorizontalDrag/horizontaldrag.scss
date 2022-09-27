@@ -6,14 +6,16 @@
     align-items: center;
     display: flex;
     gap: 2rem;
-    padding: 1rem;
+    padding: 4rem 1rem;
     overflow: scroll;
     transition: all 1s;
 
     &.active {
+      transform: scale(0.98);
+    }
+    &:hover {
       cursor: grabbing;
       cursor: -webkit-grabbing;
-      transform: scale(0.98);
     }
 
     &::-webkit-scrollbar {
@@ -26,5 +28,8 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     min-width: 25rem;
     height: 20rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

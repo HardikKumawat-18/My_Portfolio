@@ -13,9 +13,9 @@ function App() {
           </Route>
           <Route element={<WithoutURL />}>
             <Route path="project">
-              <Route path="ui-ux/:id" element={<ProjectTemplate1 />} />
+              <Route path="ui-ux/:projectName" element={<ProjectTemplate1 />} />
               <Route
-                path="interaction-motion/:id"
+                path="interaction-motion/:projectName"
                 element={<ProjectTemplate2 />}
               />
             </Route>

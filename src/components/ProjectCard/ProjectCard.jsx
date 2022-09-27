@@ -1,5 +1,6 @@
 import "./projectcard.scss";
 import { useNavigate } from "react-router-dom";
+import { camelCase } from "lodash";
 
 export const ProjectCard = ({ cardData }) => {
   let navigate = useNavigate();
@@ -35,7 +36,9 @@ export const ProjectCard = ({ cardData }) => {
         <p className="desc">{description}</p>
         <button
           onClick={() => {
-            navigate(`project/${projectType}/${title.toLowerCase()}`);
+            navigate(
+              `project/${projectType}/${camelCase(title.toLowerCase())}`
+            );
           }}
           className="std-btn"
           style={{ backgroundColor: btnColor }}

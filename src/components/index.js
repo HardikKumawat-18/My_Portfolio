@@ -8,6 +8,7 @@ import { ConnectNow } from "./ConnectNow/ConnectNow";
 import { Carousel, CarouselItem } from "./Carousel/Carousel";
 import { HorizontalDrag } from "./HorizontalDrag/HorizontalDrag";
 import { PrototypeCarousel } from "./PrototypeCarousel/PrototypeCarousel";
+import { Modal } from "./Modal/Modal";
 
 export {
   Navbar,
@@ -21,4 +22,5 @@ export {
   CarouselItem,
   HorizontalDrag,
   PrototypeCarousel,
+  Modal,
 };
