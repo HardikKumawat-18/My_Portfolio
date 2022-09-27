@@ -1,8 +1,27 @@
 import "./home.scss";
 import { ConnectNow, InterestCard, ProjectCard } from "../../components";
 import { interestsData, projectsData } from "../../data";
+import { useEffect } from "react";
 
 export const Home = () => {
+  useEffect(() => {
+    const projectCards = document.querySelectorAll(`.project-card`);
+    const projectCardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("show", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    projectCards.forEach((card) => {
+      projectCardObserver.observe(card);
+    });
+  });
+
   return (
     <div className="home">
       <div className="max-w-container">

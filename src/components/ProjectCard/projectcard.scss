@@ -4,6 +4,15 @@
   border-radius: 40px;
   overflow: hidden;
   height: 18rem;
+  opacity: 0;
+  transform: translateX(-2rem);
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   &,
   .content {
     display: flex;

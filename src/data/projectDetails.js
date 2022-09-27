@@ -1,19 +1,18 @@
 export const projects = {
   uiUx: {
-    // Use camelCase for project name and no spaces
+    // Use camelCase(when there is space between words) otherwise normal lowercase for project name and no spaces
     // docup
     docup: {
-      projectLogoImg: "",
+      projectLogoImg: "DocupLogo.png",
       projectLogoURL: "",
       projectTitle: "DocUp",
       subTitle: "UI/UX Case Study",
-      mockImg: "",
+      mockImg: "DocupMock.png",
       mockURL: "",
       projectOverview: [
         {
           title: "Application Overview",
           desc: "DocUp is a service platform & online community that allows people seek expert medical  It brings accountability & motivation to users from over 180 countries. I was one of two designers working on this project.",
-          roles: [],
         },
         {
           title: "My Roles",
@@ -23,12 +22,10 @@ export const projects = {
         {
           title: "Problems",
           desc: "People spend a large amount of their time, energy and efforts for seeking medical guidance. Either they spend hours googling and ending up with deadly diseases on there search feed or they wait in endless queue for their medical appointments.",
-          roles: [],
         },
         {
           title: "Solution",
           desc: "I designed an application (Currently for mobile platoforms) to allow users to seek medical guidance on their finger tips without wasting much of their time.",
-          roles: [],
         },
       ],
       designProcess: [
@@ -146,6 +143,12 @@ export const projects = {
           desc: "People spend a large amount of their time, energy and efforts for seeking medical guidance. Either they spend hours googling and ending up with deadly diseases on there search feed or they wait in endless queue for their medical appointments.",
           roles: [],
         },
+      ],
+      highFidelityPrototype: [
+        "bookXchange1.png",
+        "bookXchange2.png",
+        "bookXchange3.png",
+        "bookXchange4.png",
       ],
     },
   },

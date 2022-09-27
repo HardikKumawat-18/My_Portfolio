@@ -9,7 +9,9 @@ export const ProjectTemplate2 = () => {
   const { interactionMotion } = projects;
   const { [projectName]: projectData } = interactionMotion;
 
-  useEffect(() => {}, [projectData]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [projectData]);
 
   return (
     projectData && (
@@ -70,26 +72,16 @@ export const ProjectTemplate2 = () => {
           <section id="screens" className="screens">
             <h2 className="sub-title">High Fidelity Screens</h2>
             <div className="screens-container">
-              <img
-                className="screen"
-                src="/images/interaction-motion/bookXchange1.png"
-                alt="high-fidelity-prototypes"
-              />
-              <img
-                className="screen"
-                src="/images/interaction-motion/bookXchange2.png"
-                alt="high-fidelity-prototypes"
-              />
-              <img
-                className="screen"
-                src="/images/interaction-motion/bookXchange3.png"
-                alt="high-fidelity-prototypes"
-              />
-              <img
-                className="screen"
-                src="/images/interaction-motion/bookXchange4.png"
-                alt="high-fidelity-prototypes"
-              />
+              {projectData.highFidelityPrototype.map((prototype, index) => {
+                return (
+                  <img
+                    className="screen"
+                    src={`/images/high-fidelity-prototypes/${prototype}`}
+                    alt="high-fidelity-prototypes"
+                    key={index}
+                  />
+                );
+              })}
             </div>
           </section>
 
