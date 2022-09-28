@@ -3,7 +3,7 @@ export const projects = {
     // Use camelCase(when there is space between words) otherwise normal lowercase for project name and no spaces
     // docup
     docup: {
-      projectLogoImg: "DocupLogo.png",
+      projectLogoImg: "DocupLogo.svg",
       projectLogoURL: "",
       projectTitle: "DocUp",
       subTitle: "UI/UX Case Study",

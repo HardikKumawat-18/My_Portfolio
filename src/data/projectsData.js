@@ -40,7 +40,7 @@ export const projectsData = [
     logoURL: "",
     logoImg: "PlantaeLogo.png",
     projectType: "ui-ux",
-    title: "Plantae.",
+    title: "Plantae",
     Subtitle: "UI/UX Design",
     description: "An online plant nursery (Portfolio Project)",
     btnColor: "#468B5B",

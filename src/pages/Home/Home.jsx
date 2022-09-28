@@ -10,6 +10,9 @@ export const Home = () => {
       (entries) => {
         entries.forEach((entry) => {
           entry.target.classList.toggle("show", entry.isIntersecting);
+          if (entry.isIntersecting) {
+            projectCardObserver.unobserve(entry.target);
+          }
         });
       },
       {
@@ -24,19 +27,21 @@ export const Home = () => {
 
   return (
     <div className="home">
+      <img className="nav-bottom" src="/images/NavBottom.svg" alt="" />
       <div className="max-w-container">
         <section id="intro" className="intro">
           <h6 className="red-text">HELLO THERE,</h6>
-          <h1 className="title">I'm Hardik.</h1>
+          <div className="typewriter">
+            <h1 className="title">I'm Hardik.</h1>
+          </div>
           <h6 className="vsmalltext">Visual Designer</h6>
 
           <p className="sub-title">
-            A visual designer based in Mumbai, India with 
-            experience in conceptualizing and crafting digital 
-            products, helping businesses and non-profits expand 
-            their capacity for impact. I'm passionate about 
-            improving the lives of others through design and am 
-            constantly looking to learn new things every day. 
+            A visual designer based in Mumbai, India with experience in
+            conceptualizing and crafting digital products, helping businesses
+            and non-profits expand their capacity for impact. I'm passionate
+            about improving the lives of others through design and am constantly
+            looking to learn new things every day.
           </p>
 
           <button className="std-btn red">More About Me!</button>

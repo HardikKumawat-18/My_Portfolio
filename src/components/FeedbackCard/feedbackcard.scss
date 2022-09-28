@@ -3,6 +3,11 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 2rem;
   width: 80%;
+  .content {
+    h2 {
+      text-align: left;
+    }
+  }
   .user-name,
   .feedback {
     font-size: 1.3rem;

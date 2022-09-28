@@ -1,7 +1,12 @@
 import "./navbar.scss";
 import { useEffect } from "react";
+import { projectsData } from "../../data";
+import { camelCase } from "lodash";
+import { useParams } from "react-router-dom";
 
 export const Navbar = () => {
+  const { projectName } = useParams();
+
   useEffect(() => {
     let navbar = document.querySelector(".navbar");
     let initPos = 0;
@@ -19,6 +24,7 @@ export const Navbar = () => {
     };
 
     document.addEventListener("scroll", handleScroll);
+
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
@@ -30,13 +36,41 @@ export const Navbar = () => {
         <a href="/">
           <img className="nav-logo" src="/images/hrdkLogo.svg" alt="logo" />
         </a>
-        <div className="nav-items">
-          <a href="/#chat-with-me">About</a>
-          <a href="/#my-projects">Projects</a>
-          <a href="/#connect-now">Connect Now</a>
+        <div className="nav-item-container">
+          {!projectName && (
+            <a className="nav-item" href="/#chat-with-me">
+              About
+              <div className="bot-border"></div>
+            </a>
+          )}
+          <div className="dropdown-container">
+            <a className="nav-item" href="/#my-projects">
+              Projects
+              <div className="bot-border"></div>
+            </a>
+            <div className="dropdown">
+              {projectsData.map((item, index) => {
+                return (
+                  <a
+                    href={`/project/${item.projectType}/${camelCase(
+                      item.title.toLowerCase()
+                    )}`}
+                    className="nav-item"
+                    key={index}
+                  >
+                    {item.title}
+                    <div className="bot-border"></div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+          <a className="nav-item" href="#connect-now">
+            Connect Now
+            <div className="bot-border"></div>
+          </a>
         </div>
       </div>
-      <img className="nav-bottom" src="/images/NavBottom.svg" alt="" />
     </div>
   );
 };
