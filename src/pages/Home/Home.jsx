@@ -31,10 +31,12 @@ export const Home = () => {
           <h6 className="vsmalltext">Visual Designer</h6>
 
           <p className="sub-title">
-            I'm a visual designer based in Mumbai, India with experience in
-            delivering end-to-end UX/UI design for software products. I'm
-            passionate about improving the lives of others through design and am
-            constantly looking to learn new things everyday.
+            A visual designer based in Mumbai, India with 
+            experience in conceptualizing and crafting digital 
+            products, helping businesses and non-profits expand 
+            their capacity for impact. I'm passionate about 
+            improving the lives of others through design and am 
+            constantly looking to learn new things every day. 
           </p>
 
           <button className="std-btn red">More About Me!</button>
