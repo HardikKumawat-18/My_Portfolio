@@ -12,7 +12,7 @@ export const projects = {
       projectOverview: [
         {
           title: "Application Overview",
-          desc: "DocUp is a service platform & online community that allows people seek expert medical  It brings accountability & motivation to users from over 180 countries. I was one of two designers working on this project.",
+          desc: "DocUp is a service platform & online community that allows people seek expert medical advice. I was one of two designers working on this project.",
         },
         {
           title: "My Roles",
