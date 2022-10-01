@@ -170,5 +170,74 @@ export const projects = {
         embeddedLink: "Z5ccO-V9eNw",
       },
     },
+    // MyCard App
+    mycard: {
+      projectLogoImg: "MyCardLogo.png",
+      projectLogoURL: "",
+      projectTitle: "MyCard",
+      subTitle: "Interaction & Motion Design",
+      mockImg: ".png",
+      mockURL: "",
+      projectOverview: [
+        {
+          title: "Project Overview",
+          desc: "MyCard, an app prototype designed to ease the hectic credit and debit balance check, entries and financial portfolio management and lot more. The app holds up all your transactions and portfolio records secured for you to review them for later, including expense reports, investment suggestions and much more.",
+          roles: [],
+        },
+        {
+          title: "My Role",
+          desc: "",
+          roles: ["Motion designer"],
+        },
+        {
+          title: "Aim",
+          desc: "The aim of the project was to design seamless interactions for the users and provide them with a good user experience.",
+          roles: [],
+        },
+      ],
+      highFidelityPrototype: ["MyCardUI1.png", "MyCardUI2.png"],
+      motionDesign: {
+        textColor: "#ED94CC",
+        desc: "Designed on-tap interaction when clicked on a product.",
+        embeddedLink: "-3FqmCaPINI",
+      },
+    },
+    // NovelApp
+    bookXchange: {
+      projectLogoImg: "BookxchangeLogo.png",
+      projectLogoURL: "",
+      projectTitle: "Book XChange",
+      subTitle: "Interaction & Motion Design",
+      mockImg: "BookxchangeBanner.png",
+      mockURL: "",
+      projectOverview: [
+        {
+          title: "Project Overview",
+          desc: "Book Xchange is a mobile first application to engage people on lending, borrowing and buying books from local readers. The app shares the basic idea of “खुशिया बाटने से बढ़ती है” (Happiness grows when it’s shared). The app gives you a platform to share the books you have already read and give you the chance to explore more content. It works on the simple idea of how ‘Tinder’. The app uses your location and shows the registered users with the books they have uploaded.",
+          roles: [],
+        },
+        {
+          title: "My Role",
+          desc: "",
+          roles: ["Motion designer"],
+        },
+        {
+          title: "Aim",
+          desc: "The aim of the project was to design seamless interactions for the users and provide them with a good user experience.",
+          roles: [],
+        },
+      ],
+      highFidelityPrototype: [
+        "bookXchange1.png",
+        "bookXchange2.png",
+        "bookXchange3.png",
+        "bookXchange4.png",
+      ],
+      motionDesign: {
+        textColor: "#fa7c48",
+        desc: "Designed on-tap interaction when clicked on a product.",
+        embeddedLink: "Z5ccO-V9eNw",
+      },
+    },
   },
 };
