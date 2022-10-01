@@ -1,4 +1,5 @@
 @import "../ProjectTemplate1/projecttemplate.scss";
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 .project-info {
   .screens-container {
@@ -18,8 +19,7 @@
     margin: 0 0 15rem;
     .container {
       align-items: center;
-      display: flex;
-
+      display: -webkit-flex;
       .left {
         flex: 1;
         h1 {
@@ -33,6 +33,21 @@
       }
       .right {
         flex: 2;
+        .mobile-wrapper {
+          margin-left: auto;
+          width: 30rem;
+          position: relative;
+          .mobile-mockup {
+            position: absolute;
+            width: 100%;
+            right: 5rem;
+            top: -1.25rem;
+            pointer-events: none;
+          }
+          .video {
+            border-radius: 25px;
+          }
+        }
       }
     }
   }

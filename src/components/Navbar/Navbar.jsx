@@ -38,13 +38,13 @@ export const Navbar = () => {
         </a>
         <div className="nav-item-container">
           {!projectName && (
-            <a className="nav-item" href="/#chat-with-me">
+            <a className="nav-item" href="#chat-with-me">
               About
               <div className="bot-border"></div>
             </a>
           )}
           <div className="dropdown-container">
-            <a className="nav-item" href="/#my-projects">
+            <a className="nav-item" href="#my-projects">
               Projects
               <div className="bot-border"></div>
             </a>

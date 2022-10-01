@@ -11,7 +11,6 @@ export const CarouselItem = ({ children, width }) => {
 
 export const Carousel = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
 
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
@@ -25,9 +24,7 @@ export const Carousel = ({ children }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!paused) {
-        updateIndex(activeIndex + 1);
-      }
+      updateIndex(activeIndex + 1);
     }, 2000);
 
     return () => {
@@ -38,11 +35,7 @@ export const Carousel = ({ children }) => {
   });
 
   return (
-    <div
-      className="carousel"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
+    <div className="carousel">
       <div
         className="carousel-track"
         style={{

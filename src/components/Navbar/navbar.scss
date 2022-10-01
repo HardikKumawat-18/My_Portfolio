@@ -59,6 +59,7 @@
           transform: translateY(0);
           transition: all 0.5s ease-in-out;
           width: 200%;
+          visibility: hidden;
           z-index: -2;
           a {
             width: fit-content;
@@ -66,6 +67,8 @@
         }
         .nav-item:hover ~ .dropdown,
         .dropdown:hover {
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          visibility: visible;
           opacity: 1;
           transform: translateY(1rem);
           z-index: 1;

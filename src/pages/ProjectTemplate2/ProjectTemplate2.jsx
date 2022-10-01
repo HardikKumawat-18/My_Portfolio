@@ -99,7 +99,23 @@ export const ProjectTemplate2 = () => {
                   corrupti dignissimos voluptatum est error tempora quis cumque!
                 </p>
               </div>
-              <div className="right"></div>
+              <div className="right">
+                <div className="mobile-wrapper">
+                  <img
+                    className="mobile-mockup"
+                    src="/images/Iphone.png"
+                    alt="Iphone Mockup"
+                  />
+                  <iframe
+                    title={projectData.videoTitle}
+                    className="video"
+                    width="320"
+                    height="670"
+                    src="https://www.youtube.com/embed/atXD0R9XE1I"
+                    frameBorder="0"
+                  ></iframe>
+                </div>
+              </div>
             </div>
           </section>
 
