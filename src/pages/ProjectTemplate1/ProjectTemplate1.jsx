@@ -97,37 +97,32 @@ export const ProjectTemplate1 = () => {
             </Carousel>
 
             <h2 className="sub-title">User Research</h2>
-            <p className="desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              dicta earum saepe architecto sed magnam illum deleniti dolore
-              delectus qui voluptate veritatis, repellat, ipsum assumenda, amet
-              quisquam quos blanditiis doloribus.
-            </p>
+            <p className="desc">{projectData.userResearch}</p>
 
             <h2 className="sub-title">Problem Identification</h2>
             <div className="flex-container">
               <div>
                 {/* <img src="" alt="" /> */}
                 <p className="desc">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Incidunt natus facere vitae accusantium praesentium esse
-                  dignissimos maiores ad hic quam?
+                  {projectData.problemIdentification[0].problemDesc}
                 </p>
               </div>
               <div>
                 {/* <img src="" alt="" /> */}
                 <p className="desc">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Incidunt natus facere vitae accusantium praesentium esse
-                  dignissimos maiores ad hic quam?
+                  {projectData.problemIdentification[1].problemDesc}
                 </p>
               </div>
               <div>
                 {/* <img src="" alt="" /> */}
                 <p className="desc">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Incidunt natus facere vitae accusantium praesentium esse
-                  dignissimos maiores ad hic quam?
+                  {projectData.problemIdentification[2].problemDesc}
+                </p>
+              </div>
+              <div>
+                {/* <img src="" alt="" /> */}
+                <p className="desc">
+                  {projectData.problemIdentification[3].problemDesc}
                 </p>
               </div>
             </div>
