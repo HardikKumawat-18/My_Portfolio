@@ -46,16 +46,16 @@ export const HorizontalDrag = ({ slides, modalBool, imgSrc }) => {
       <div className="track">
         {slides.map((slide, index) => {
           return (
-            <img
-              key={index}
-              className="slide"
-              src={`/images/wireframes/${slide}`}
-              alt="wireframe"
-              onClick={() => {
-                imgSrc(`/images/wireframes/${slide}`);
-                modalBool(true);
-              }}
-            />
+            <div className="slide" key={index}>
+              <img
+                src={`/images/wireframes/${slide}`}
+                alt="wireframe"
+                onClick={() => {
+                  imgSrc(`/images/wireframes/${slide}`);
+                  modalBool(true);
+                }}
+              />
+            </div>
           );
         })}
       </div>

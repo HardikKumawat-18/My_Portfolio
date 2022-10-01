@@ -4,7 +4,7 @@ import "./prototypecarousel.scss";
 export const PrototypeCarousel = ({ slides }) => {
   const [slideWidth, setSlideWidth] = useState();
   const [noOfSlides, setNoOfSlides] = useState();
-  const [activeIndex, setActiveIndex] = useState();
+  const [activeIndex, setActiveIndex] = useState(0);
   const [initOffSet, setInitOffSet] = useState();
   const prototype = document.querySelector(`.prototype-carousel`);
   const track = prototype?.querySelector(`.track`);
@@ -19,10 +19,8 @@ export const PrototypeCarousel = ({ slides }) => {
     setNoOfSlides(track?.querySelectorAll(`.slide`).length);
     if (noOfSlides % 2 === 0) {
       setInitOffSet(slideWidth / 2 + 16);
-      setActiveIndex(noOfSlides / 2);
     } else {
       setInitOffSet(0);
-      setActiveIndex((noOfSlides - 1) / 2);
     }
   }, [noOfSlides, slideWidth, track]);
 

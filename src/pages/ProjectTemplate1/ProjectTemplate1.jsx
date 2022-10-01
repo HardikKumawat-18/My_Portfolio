@@ -98,33 +98,35 @@ export const ProjectTemplate1 = () => {
 
             <h2 className="sub-title">User Research</h2>
             <p className="desc">{projectData.userResearch}</p>
+            <div className="research-img-container">
+              {projectData.userResearchIImages &&
+                projectData.userResearchIImages.map((image, index) => {
+                  return (
+                    <img
+                      className="user-research-img"
+                      src={`/images/user-research/${image}`}
+                      alt="user-reasearch-img"
+                      key={index}
+                    />
+                  );
+                })}
+            </div>
 
             <h2 className="sub-title">Problem Identification</h2>
             <div className="flex-container">
-              <div>
-                {/* <img src="" alt="" /> */}
-                <p className="desc">
-                  {projectData.problemIdentification[0].problemDesc}
-                </p>
-              </div>
-              <div>
-                {/* <img src="" alt="" /> */}
-                <p className="desc">
-                  {projectData.problemIdentification[1].problemDesc}
-                </p>
-              </div>
-              <div>
-                {/* <img src="" alt="" /> */}
-                <p className="desc">
-                  {projectData.problemIdentification[2].problemDesc}
-                </p>
-              </div>
-              <div>
-                {/* <img src="" alt="" /> */}
-                <p className="desc">
-                  {projectData.problemIdentification[3].problemDesc}
-                </p>
-              </div>
+              {projectData.problemIdentification.map((problem, index) => {
+                return (
+                  <div className="problem" key={index}>
+                    <img
+                      src={`/images/${
+                        problem.problemImg || problem.problemURL
+                      }`}
+                      alt=""
+                    />
+                    <p className="desc">{problem.problemDesc}</p>
+                  </div>
+                );
+              })}
             </div>
 
             {projectData.userJourney && (
@@ -160,7 +162,17 @@ export const ProjectTemplate1 = () => {
             <PrototypeCarousel slides={projectData.highFidelityPrototype} />
             <h2 className="sub-title">Prototype Feedback</h2>
             <div className="feedback-container">
-              <FeedbackCard />
+              {projectData.prototypeFeedback.map((feedback, index) => {
+                return (
+                  <FeedbackCard
+                    userName={feedback.userName}
+                    imgSrc={feedback.userProfile}
+                    feedback={feedback.feedback}
+                    index={index}
+                    key={index}
+                  />
+                );
+              })}
             </div>
           </section>
 

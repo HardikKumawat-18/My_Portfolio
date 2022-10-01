@@ -89,15 +89,15 @@ export const ProjectTemplate2 = () => {
             <div className="container">
               <div className="left">
                 <h1 className="title">
-                  <span>Motion</span>
+                  <span
+                    style={{ color: `${projectData.motionDesign.textColor}` }}
+                  >
+                    Motion
+                  </span>
                   <br />
                   Design
                 </h1>
-                <p className="desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Praesentium tempora totam similique. Delectus vero earum quos
-                  corrupti dignissimos voluptatum est error tempora quis cumque!
-                </p>
+                <p className="desc">{projectData.motionDesign.desc}</p>
               </div>
               <div className="right">
                 <div className="mobile-wrapper">
@@ -111,7 +111,7 @@ export const ProjectTemplate2 = () => {
                     className="video"
                     width="320"
                     height="670"
-                    src="https://www.youtube.com/embed/atXD0R9XE1I"
+                    src={`https://www.youtube.com/embed/${projectData.motionDesign.embeddedLink}`}
                     frameBorder="0"
                   ></iframe>
                 </div>
