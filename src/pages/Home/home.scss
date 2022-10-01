@@ -1,13 +1,13 @@
 .home {
   .nav-bottom {
-    display: flex;
+    display: -webkit-flex;
     margin: auto;
     width: 97%;
   }
 
   // Intro
   .intro {
-    display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.2rem;
@@ -30,7 +30,7 @@
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         border-right: 0.2rem solid black; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
-        animation: typing 2s steps(11, end), blink-caret 0.5s step-end infinite;
+        animation: typing 2s steps(11, end), blink-caret 0.5s step-end 12;
         width: fit-content;
       }
     }
@@ -101,7 +101,7 @@
 
   // Chat With Me
   .interest-card-container {
-    display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     gap: 3rem;
     margin: 2rem 0;
@@ -109,7 +109,7 @@
 
   // My Projects
   .project-card-container {
-    display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     margin: 2rem 0;
     gap: 2rem;

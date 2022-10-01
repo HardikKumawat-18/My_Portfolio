@@ -3,7 +3,7 @@ export const projectsData = [
     thumbnailURL: "",
     thumbnailImg: "DocupBanner.png",
     logoURL: "",
-    logoImg: "DocupLogo.png",
+    logoImg: "DocupLogo.svg",
     projectType: "ui-ux",
     title: "DocUp",
     Subtitle: "A UI/UX Case Study",
