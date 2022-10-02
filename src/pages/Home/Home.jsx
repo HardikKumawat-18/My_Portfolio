@@ -1,9 +1,16 @@
 import "./home.scss";
-import { ConnectNow, InterestCard, ProjectCard } from "../../components";
+import {
+  ConnectNow,
+  InterestCard,
+  Loading,
+  ProjectCard,
+} from "../../components";
 import { interestsData, projectsData } from "../../data";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const Home = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const projectCards = document.querySelectorAll(`.project-card`);
     const projectCardObserver = new IntersectionObserver(
@@ -23,7 +30,21 @@ export const Home = () => {
     projectCards.forEach((card) => {
       projectCardObserver.observe(card);
     });
+
+    let interval = setInterval(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
   });
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="home">

@@ -10,6 +10,8 @@ import { HorizontalDrag } from "./HorizontalDrag/HorizontalDrag";
 import { PrototypeCarousel } from "./PrototypeCarousel/PrototypeCarousel";
 import { PrototypeDesktopCarousel } from "./PrototypeDesktopCarousel/PrototypeDesktopCarousel";
 import { Modal } from "./Modal/Modal";
+import { Loading } from "./Loading/Loading";
+import { NotFound } from "./NotFound/NotFound";
 
 export {
   Navbar,
@@ -25,4 +27,6 @@ export {
   PrototypeCarousel,
   PrototypeDesktopCarousel,
   Modal,
+  Loading,
+  NotFound,
 };

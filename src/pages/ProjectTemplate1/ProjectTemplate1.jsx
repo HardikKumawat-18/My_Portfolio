@@ -8,12 +8,14 @@ import {
   PrototypeCarousel,
   Modal,
   PrototypeDesktopCarousel,
+  Loading,
 } from "../../components";
 import { useParams } from "react-router-dom";
 import { projects, projectsData } from "../../data";
 import { useEffect, useState } from "react";
 
 export const ProjectTemplate1 = () => {
+  const [loading, setLoading] = useState(true);
   const { projectName } = useParams();
   const { uiUx } = projects;
   const { [projectName]: projectData } = uiUx;
@@ -22,7 +24,20 @@ export const ProjectTemplate1 = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    let interval = setInterval(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     projectData && (
