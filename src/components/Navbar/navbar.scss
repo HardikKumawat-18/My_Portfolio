@@ -19,8 +19,8 @@
     }
 
     .nav-item-container {
-      -webkit-gap: 2rem;
-      gap: 2rem;
+      -webkit-column-gap: 2rem;
+      column-gap: 2rem;
       font-family: "Poppins", sans-serif;
       font-size: 1.2rem;
       font-weight: 300;
