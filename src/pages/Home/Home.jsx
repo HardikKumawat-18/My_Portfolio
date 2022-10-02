@@ -44,7 +44,9 @@ export const Home = () => {
             looking to learn new things every day.
           </p>
 
-          <button className="std-btn red">More About Me!</button>
+          <a href="#chat-with-me">
+            <button className="std-btn red">More About Me!</button>
+          </a>
 
           <span className="tag-line">
             I Create better experience for{" "}

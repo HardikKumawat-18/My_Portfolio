@@ -114,17 +114,17 @@ export const projects = {
       ],
       prototypeFeedback: [
         {
-          userProfile: "guy1.png",
+          userProfile: "Guy1.png",
           userName: "Jatin Y",
           feedback: "Can bring a next level revolution in medtech field.",
         },
         {
-          userProfile: "girl1.png",
+          userProfile: "Girl1.png",
           userName: "Hannah S",
           feedback: "I like how the app can provide all round features",
         },
         {
-          userProfile: "girl2.png",
+          userProfile: "Girl2.png",
           userName: "Vartika R",
           feedback:
             "Like the idea of the application but would like to know and udedrstand more about the business sustainability",
