@@ -87,30 +87,30 @@ export const projects = {
         },
       ],
       wireframes: [
-        "docup1.png",
-        "docup2.png",
-        "docup3.png",
-        "docup4.png",
-        "DocUpColour.jpg",
-        "DocUpPic1.jpg",
-        "DocUpPic2.jpg",
-        "DocUpPic3.jpg",
+        "docup1.webp",
+        "docup2.webp",
+        "docup3.webp",
+        "docup4.webp",
+        "DocUpColour.webp",
+        "DocUpPic1.webp",
+        "DocUpPic2.webp",
+        "DocUpPic3.webp",
       ],
       highFidelityPrototype: [
-        "DocUp_LandingPage.png",
-        "DocUp_LoginScreen.png",
-        "DocUp_CreateAnAccount.png",
-        "DocUp_Location.png",
-        "DocUp_Doctor.png",
-        "DocUp_HomeScreen.png",
-        "DocUp_Hospitals.png",
-        "DocUp_MedicalStore.png",
-        "DocUp_Search.png",
-        "DocUp_DoctorInfo.png",
-        "DocUp_Hosptial Info.png",
-        "DocUp_Bookings.png",
-        "DocUp_Chat.png",
-        "DocUp_Saved.png",
+        "DocUp_LandingPage.webp",
+        "DocUp_LoginScreen.webp",
+        "DocUp_CreateAnAccount.webp",
+        "DocUp_Location.webp",
+        "DocUp_Doctor.webp",
+        "DocUp_HomeScreen.webp",
+        "DocUp_Hospitals.webp",
+        "DocUp_MedicalStore.webp",
+        "DocUp_Search.webp",
+        "DocUp_DoctorInfo.webp",
+        "DocUp_Hosptial Info.webp",
+        "DocUp_Bookings.webp",
+        "DocUp_Chat.webp",
+        "DocUp_Saved.webp",
       ],
       prototypeFeedback: [
         {
@@ -129,6 +129,75 @@ export const projects = {
           feedback:
             "Like the idea of the application but would like to know and udedrstand more about the business sustainability",
         },
+      ],
+    },
+    plantae: {
+      projectLogoImg: "PlantaeLogo.webp",
+      projectLogoURL: "",
+      projectTitle: "Plantae",
+      subTitle: "User Interface design",
+      mockImg: "PlantaeProfile.webp",
+      mockURL: "",
+      projectOverview: [
+        {
+          title: "Application Overview",
+          desc: "Plantae is an e-commerce application prototyped to be an online flower store that delivers flowers PAN India. The application is built to deliver the best quality - fresh cut flowers in all over India with the help of our strong affiliate network and channel stores.",
+        },
+        {
+          title: "My Roles",
+          desc: "",
+          roles: ["UI Designer"],
+        },
+        {
+          title: "Aim",
+          desc: "To create an intuitive e-commerce website interface, which could engage people and increase the impressions and sales of the company. To incorporate the company aesthetic in the interface as much as possible and make the user experience as delightful as possible.",
+        },
+      ],
+      designProcess: [
+        {
+          pictureImg: "Define.png",
+          pictureURL: "",
+        },
+        {
+          pictureImg: "Brainstorm.png",
+          pictureURL: "",
+        },
+        {
+          pictureImg: "Design.png",
+          pictureURL: "",
+        },
+        {
+          pictureImg: "Test.png",
+          pictureURL: "",
+        },
+        {
+          pictureImg: "Launch.png",
+          pictureURL: "",
+        },
+        {
+          pictureImg: "Iterate.png",
+          pictureURL: "",
+        },
+      ],
+      // wireframes: [
+      //   "docup1.webp",
+      //   "docup2.webp",
+      //   "docup3.webp",
+      //   "docup4.webp",
+      //   "DocUpColour.webp",
+      //   "DocUpPic1.webp",
+      //   "DocUpPic2.webp",
+      //   "DocUpPic3.webp",
+      // ],
+      highFidelityDesktopPrototype: [
+        "PlantaeHome.webp",
+        "PlantaeAbout.webp",
+        "PlantaeStore.webp",
+        "PlantaeDropdown.webp",
+        "PlantaeProduct.webp",
+        "PlantaeStore2.webp",
+        "PlantaeCard.webp",
+        "PlantaeFooter.webp",
       ],
     },
   },
@@ -159,10 +228,10 @@ export const projects = {
         },
       ],
       highFidelityPrototype: [
-        "bookXchange1.png",
-        "bookXchange2.png",
-        "bookXchange3.png",
-        "bookXchange4.png",
+        "bookXchange1.webp",
+        "bookXchange2.webp",
+        "bookXchange3.webp",
+        "bookXchange4.webp",
       ],
       motionDesign: {
         textColor: "#fa7c48",
@@ -172,11 +241,11 @@ export const projects = {
     },
     // MyCard App
     mycard: {
-      projectLogoImg: "MyCardLogo.png",
+      projectLogoImg: "MycardLogo.png",
       projectLogoURL: "",
       projectTitle: "MyCard",
       subTitle: "Interaction & Motion Design",
-      mockImg: ".png",
+      mockImg: "MyCardProfile.webp",
       mockURL: "",
       projectOverview: [
         {
@@ -195,7 +264,7 @@ export const projects = {
           roles: [],
         },
       ],
-      highFidelityPrototype: ["MyCardUI1.png", "MyCardUI2.png"],
+      highFidelityPrototype: ["MyCardUI1.webp", "MyCardUI2.webp"],
       motionDesign: {
         textColor: "#ED94CC",
         desc: "Designed on-tap interaction when clicked on a product.",
@@ -203,7 +272,7 @@ export const projects = {
       },
     },
     // NovelApp
-    bookXchange: {
+    novelApp: {
       projectLogoImg: "BookxchangeLogo.png",
       projectLogoURL: "",
       projectTitle: "Book XChange",
