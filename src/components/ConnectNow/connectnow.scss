@@ -4,7 +4,7 @@
 
     &,
     .content {
-      display: flex;
+      display: -webkit-flex;
       justify-content: flex-end;
     }
 
@@ -23,7 +23,7 @@
       .upper {
         align-items: center;
         width: fit-content;
-        display: flex;
+        display: -webkit-flex;
         justify-content: flex-start;
         gap: 15rem;
         position: relative;
@@ -56,7 +56,7 @@
       }
 
       .form {
-        display: flex;
+        display: -webkit-flex;
         top: 20rem;
         opacity: 0;
         flex-wrap: wrap;
@@ -67,7 +67,7 @@
         z-index: -4;
         height: fit-content;
         .form-input {
-          display: flex;
+          display: -webkit-flex;
           flex-direction: column;
           input,
           textarea {

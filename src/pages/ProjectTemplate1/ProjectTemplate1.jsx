@@ -7,9 +7,10 @@ import {
   HorizontalDrag,
   PrototypeCarousel,
   Modal,
+  PrototypeDesktopCarousel,
 } from "../../components";
 import { useParams } from "react-router-dom";
-import { projects } from "../../data";
+import { projects, projectsData } from "../../data";
 import { useEffect, useState } from "react";
 
 export const ProjectTemplate1 = () => {
@@ -96,38 +97,48 @@ export const ProjectTemplate1 = () => {
               })}
             </Carousel>
 
-            <h2 className="sub-title">User Research</h2>
-            <p className="desc">{projectData.userResearch}</p>
-            <div className="research-img-container">
-              {projectData.userResearchIImages &&
-                projectData.userResearchIImages.map((image, index) => {
-                  return (
-                    <img
-                      className="user-research-img"
-                      src={`/images/user-research/${image}`}
-                      alt="user-reasearch-img"
-                      key={index}
-                    />
-                  );
-                })}
-            </div>
+            {projectData.userResearch && (
+              <>
+                <h2 className="sub-title">User Research</h2>
+                <p className="desc">{projectData.userResearch}</p>
+              </>
+            )}
+            {projectData.userResearchImages && (
+              <div className="research-img-container">
+                {projectData.userResearchIImages &&
+                  projectData.userResearchIImages.map((image, index) => {
+                    return (
+                      <img
+                        className="user-research-img"
+                        src={`/images/user-research/${image}`}
+                        alt="user-reasearch-img"
+                        key={index}
+                      />
+                    );
+                  })}
+              </div>
+            )}
 
-            <h2 className="sub-title">Problem Identification</h2>
-            <div className="flex-container">
-              {projectData.problemIdentification.map((problem, index) => {
-                return (
-                  <div className="problem" key={index}>
-                    <img
-                      src={`/images/${
-                        problem.problemImg || problem.problemURL
-                      }`}
-                      alt=""
-                    />
-                    <p className="desc">{problem.problemDesc}</p>
-                  </div>
-                );
-              })}
-            </div>
+            {projectData.problemIdentification && (
+              <>
+                <h2 className="sub-title">Problem Identification</h2>
+                <div className="flex-container">
+                  {projectData.problemIdentification.map((problem, index) => {
+                    return (
+                      <div className="problem" key={index}>
+                        <img
+                          src={`/images/${
+                            problem.problemImg || problem.problemURL
+                          }`}
+                          alt=""
+                        />
+                        <p className="desc">{problem.problemDesc}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
+            )}
 
             {projectData.userJourney && (
               <>
@@ -152,28 +163,49 @@ export const ProjectTemplate1 = () => {
 
           <section id="prototyping" className="prototyping">
             <h2 className="sub-title">Prototyping</h2>
-            <h2 className="sub-title">Wireframes</h2>
-            <HorizontalDrag
-              slides={projectData.wireframes}
-              modalBool={setModalBool}
-              imgSrc={setImgSrc}
-            />
-            <h2 className="sub-title">High Fidelity Prototype</h2>
-            <PrototypeCarousel slides={projectData.highFidelityPrototype} />
-            <h2 className="sub-title">Prototype Feedback</h2>
-            <div className="feedback-container">
-              {projectData.prototypeFeedback.map((feedback, index) => {
-                return (
-                  <FeedbackCard
-                    userName={feedback.userName}
-                    imgSrc={feedback.userProfile}
-                    feedback={feedback.feedback}
-                    index={index}
-                    key={index}
-                  />
-                );
-              })}
-            </div>
+            {projectsData.wireframes && (
+              <>
+                <h2 className="sub-title">Wireframes</h2>
+                <HorizontalDrag
+                  slides={projectData.wireframes}
+                  modalBool={setModalBool}
+                  imgSrc={setImgSrc}
+                />
+              </>
+            )}
+            {projectData.highFidelityPrototype && (
+              <>
+                <h2 className="sub-title">High Fidelity Prototype</h2>
+                <PrototypeCarousel slides={projectData.highFidelityPrototype} />
+              </>
+            )}
+            {projectData.highFidelityDesktopPrototype && (
+              <>
+                <h2 className="sub-title">High Fidelity Prototype(Desktop)</h2>
+                <PrototypeDesktopCarousel
+                  slides={projectData.highFidelityDesktopPrototype}
+                />
+              </>
+            )}
+
+            {projectData.prototypeFeedback && (
+              <>
+                <h2 className="sub-title">Prototype Feedback</h2>
+                <div className="feedback-container">
+                  {projectData.prototypeFeedback.map((feedback, index) => {
+                    return (
+                      <FeedbackCard
+                        userName={feedback.userName}
+                        imgSrc={feedback.userProfile}
+                        feedback={feedback.feedback}
+                        index={index}
+                        key={index}
+                      />
+                    );
+                  })}
+                </div>
+              </>
+            )}
           </section>
 
           <ConnectNow />

@@ -1,17 +1,24 @@
 import { useEffect, useState } from "react";
-import "./prototypecarousel.scss";
+import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+import "./prototypeDesktopCarousel.scss";
 
-export const PrototypeCarousel = ({ slides }) => {
+export const PrototypeDesktopCarousel = ({ slides }) => {
   const [slideWidth, setSlideWidth] = useState();
   const [noOfSlides, setNoOfSlides] = useState();
   const [activeIndex, setActiveIndex] = useState(0);
   const [initOffSet, setInitOffSet] = useState();
-  const prototype = document.querySelector(`.prototype-carousel`);
+  const prototype = document.querySelector(`.prototype-desktop-carousel`);
   const track = prototype?.querySelector(`.track`);
   let slideBy = slideWidth + 32;
 
   const updateIndex = (newIndex) => {
-    setActiveIndex(newIndex);
+    if (newIndex < 0) {
+      setActiveIndex(noOfSlides - 1);
+    } else if (newIndex < noOfSlides) {
+      setActiveIndex(newIndex);
+    } else {
+      setActiveIndex(0);
+    }
   };
 
   useEffect(() => {
@@ -25,7 +32,21 @@ export const PrototypeCarousel = ({ slides }) => {
   }, [noOfSlides, slideWidth, track]);
 
   return (
-    <div className="prototype-carousel">
+    <div className="prototype-desktop-carousel">
+      <div className="arrow-container">
+        <HiOutlineArrowSmLeft
+          onClick={() => {
+            updateIndex(activeIndex - 1);
+          }}
+          className="arrow left"
+        />
+        <HiOutlineArrowSmRight
+          onClick={() => {
+            updateIndex(activeIndex + 1);
+          }}
+          className="arrow right"
+        />
+      </div>
       <div className="track-container">
         <div
           className="track"
@@ -39,17 +60,20 @@ export const PrototypeCarousel = ({ slides }) => {
           {slides &&
             slides.map((slide, index) => {
               return (
-                <img
-                  src={`/images/high-fidelity-prototypes/${slide}`}
-                  alt="high-fidelity-prototypes"
-                  className={`slide ${index === activeIndex ? `active` : ``}`}
+                <div
                   key={index}
                   onClick={() => updateIndex(index)}
-                />
+                  className={`slide ${index === activeIndex ? `active` : ``}`}
+                >
+                  <img
+                    src={`/images/high-fidelity-prototypes/${slide}`}
+                    alt="high-fidelity-prototypes"
+                  />
+                </div>
               );
             })}
         </div>
-        <img className="phone-img" src="/images/Iphone.png" alt="Iphone" />
+        <img className="mac-img" src="/images/imac.png" alt="imac" />
         <div className="indicators">
           {slides &&
             slides.map((slide, index) => {
