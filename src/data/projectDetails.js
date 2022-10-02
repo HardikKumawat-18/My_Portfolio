@@ -203,7 +203,7 @@ export const projects = {
       },
     },
     // NovelApp
-    bookXchange: {
+    novelApp: {
       projectLogoImg: "BookxchangeLogo.png",
       projectLogoURL: "",
       projectTitle: "Book XChange",
