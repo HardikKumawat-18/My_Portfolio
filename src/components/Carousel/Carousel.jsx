@@ -1,4 +1,4 @@
-import { Children, cloneElement, useEffect, useState } from "react";
+import { Children, cloneElement, useEffect, useRef, useState } from "react";
 import "./carousel.scss";
 
 export const CarouselItem = ({ children, width }) => {
@@ -11,6 +11,8 @@ export const CarouselItem = ({ children, width }) => {
 
 export const Carousel = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [onScreen, setOnScreen] = useState(false);
+  const carousel = useRef(null);
 
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
@@ -22,10 +24,23 @@ export const Carousel = ({ children }) => {
     setActiveIndex(newIndex);
   };
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setOnScreen(true);
+        observer.unobserve(carousel.current);
+      }
+    });
+  });
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      updateIndex(activeIndex + 1);
-    }, 2000);
+    observer.observe(carousel.current);
+    let interval;
+    if (onScreen) {
+      interval = setInterval(() => {
+        updateIndex(activeIndex + 1);
+      }, 2000);
+    }
 
     return () => {
       if (interval) {
@@ -35,7 +50,7 @@ export const Carousel = ({ children }) => {
   });
 
   return (
-    <div className="carousel">
+    <div className="carousel" ref={carousel}>
       <div
         className="carousel-track"
         style={{
