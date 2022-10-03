@@ -13,6 +13,7 @@ export const Home = () => {
 
   useEffect(() => {
     const projectCards = document.querySelectorAll(`.project-card`);
+    const home = document.querySelector(`.home`);
     const projectCardObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,9 +28,19 @@ export const Home = () => {
       }
     );
 
+    const homeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry?.target?.classList.add("show", entry.isIntersecting);
+      });
+    });
+
     projectCards.forEach((card) => {
       projectCardObserver.observe(card);
     });
+
+    if (home) {
+      homeObserver.observe(home);
+    }
 
     let interval = setInterval(() => {
       setLoading(false);

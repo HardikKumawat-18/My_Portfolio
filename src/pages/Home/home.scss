@@ -1,4 +1,11 @@
 .home {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &.show {
+    opacity: 1;
+  }
+
   .nav-bottom {
     display: -webkit-flex;
     margin: auto;
