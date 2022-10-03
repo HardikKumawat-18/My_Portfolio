@@ -1,21 +1,32 @@
 import "./projecttemplate2.scss";
-import { ConnectNow } from "../../components";
+import { ConnectNow, Loading } from "../../components";
 import { useParams } from "react-router-dom";
 import { projects } from "../../data";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const ProjectTemplate2 = () => {
+  const [loading, setLoading] = useState(true);
+
   const { projectName } = useParams();
   const { interactionMotion } = projects;
   const { [projectName]: projectData } = interactionMotion;
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    let interval = setInterval(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
   }, [projectData]);
 
   return (
     projectData && (
-      <div className="project-info">
+      <div className={`project-info ${loading ? `pre-load` : ``}`}>
         <div className="max-w-container">
           <section id="intro" className="intro">
             <div className="flex-container">
@@ -121,6 +132,7 @@ export const ProjectTemplate2 = () => {
 
           <ConnectNow />
         </div>
+        {loading && <Loading />}
       </div>
     )
   );

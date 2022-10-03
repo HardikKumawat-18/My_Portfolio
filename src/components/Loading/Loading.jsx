@@ -24,7 +24,8 @@ export const Loading = () => {
       </div>
       <div className="alert-container">
         <div className="desc">
-          For the best experience please use,
+          For the best experience please use latest version of respective
+          browsers,
           <br />
           <div className="flex">
             <img

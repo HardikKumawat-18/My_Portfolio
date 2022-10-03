@@ -13,7 +13,6 @@ export const Home = () => {
 
   useEffect(() => {
     const projectCards = document.querySelectorAll(`.project-card`);
-    const home = document.querySelector(`.home`);
     const projectCardObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,23 +27,13 @@ export const Home = () => {
       }
     );
 
-    const homeObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        entry?.target?.classList.add("show", entry.isIntersecting);
-      });
-    });
-
     projectCards.forEach((card) => {
       projectCardObserver.observe(card);
     });
 
-    if (home) {
-      homeObserver.observe(home);
-    }
-
     let interval = setInterval(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
 
     return () => {
       if (interval) {
@@ -53,12 +42,8 @@ export const Home = () => {
     };
   });
 
-  if (loading) {
-    return <Loading />;
-  }
-
   return (
-    <div className="home">
+    <div className={`home ${loading ? `pre-load` : ``}`}>
       <img className="nav-bottom" src="/images/NavBottom.svg" alt="" />
       <div className="max-w-container">
         <section id="intro" className="intro">
@@ -123,6 +108,7 @@ export const Home = () => {
 
         <ConnectNow />
       </div>
+      {loading && <Loading />}
     </div>
   );
 };

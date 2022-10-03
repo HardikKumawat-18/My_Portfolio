@@ -1,4 +1,21 @@
 .project-info {
+  &.pre-load {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .max-w-container {
+    animation: fadeIn 0.7s ease-in-out 2s;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
   .sub-title {
     font-size: 1.5rem;
     font-weight: 300;

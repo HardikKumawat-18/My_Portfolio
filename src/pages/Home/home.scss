@@ -1,6 +1,22 @@
 .home {
-  opacity: 0;
   transition: opacity 0.2s ease-in-out;
+
+  &.pre-load {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .max-w-container {
+    animation: fadeIn 0.7s ease-in-out 2s;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
 
   &.show {
     opacity: 1;
@@ -42,7 +58,7 @@
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         border-right: 0.2rem solid black; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
-        animation: typing 2s steps(11, end), blink-caret 0.5s step-end 12;
+        animation: typing 2s steps(11, end) 2s, blink-caret 0.5s step-end 12 2s;
         width: fit-content;
       }
     }
@@ -127,6 +143,6 @@
 
   #chat-with-me,
   #my-projects {
-    margin-bottom: 15rem;
+    margin: 4rem 0;
   }
 }

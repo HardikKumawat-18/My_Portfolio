@@ -26,7 +26,7 @@ export const ProjectTemplate1 = () => {
     window.scrollTo(0, 0);
     let interval = setInterval(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
 
     return () => {
       if (interval) {
@@ -35,13 +35,9 @@ export const ProjectTemplate1 = () => {
     };
   }, []);
 
-  if (loading) {
-    return <Loading />;
-  }
-
   return (
     projectData && (
-      <div className="project-info">
+      <div className={`project-info ${loading ? `pre-load` : ``}`}>
         <div className="max-w-container">
           <section id="intro" className="intro">
             <div className="flex-container">
@@ -226,6 +222,7 @@ export const ProjectTemplate1 = () => {
           <ConnectNow />
         </div>
         {modalBool && <Modal imgSrc={imgSrc} modalBool={setModalBool} />}
+        {loading && <Loading />}
       </div>
     )
   );
