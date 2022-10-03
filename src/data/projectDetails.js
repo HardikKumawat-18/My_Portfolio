@@ -96,6 +96,16 @@ export const projects = {
         "DocUpPic2.webp",
         "DocUpPic3.webp",
       ],
+      wireframesAlternate: [
+        "docup1.png",
+        "docup2.png",
+        "docup3.png",
+        "docup4.png",
+        "DocUpColour.png",
+        "DocUpPic1.png",
+        "DocUpPic2.png",
+        "DocUpPic3.png",
+      ],
       highFidelityPrototype: [
         "DocUp_LandingPage.webp",
         "DocUp_LoginScreen.webp",
@@ -111,6 +121,22 @@ export const projects = {
         "DocUp_Bookings.webp",
         "DocUp_Chat.webp",
         "DocUp_Saved.webp",
+      ],
+      highFidelityPrototypeAlternate: [
+        "DocUp_LandingPage.png",
+        "DocUp_LoginScreen.png",
+        "DocUp_CreateAnAccount.png",
+        "DocUp_Location.png",
+        "DocUp_Doctor.png",
+        "DocUp_HomeScreen.png",
+        "DocUp_Hospitals.png",
+        "DocUp_MedicalStore.png",
+        "DocUp_Search.png",
+        "DocUp_DoctorInfo.png",
+        "DocUp_Hosptial Info.png",
+        "DocUp_Bookings.png",
+        "DocUp_Chat.png",
+        "DocUp_Saved.png",
       ],
       prototypeFeedback: [
         {
@@ -133,10 +159,12 @@ export const projects = {
     },
     plantae: {
       projectLogoImg: "PlantaeLogo.webp",
+      projectLogoImgAlt: "PlantaeLogo.png",
       projectLogoURL: "",
       projectTitle: "Plantae",
       subTitle: "User Interface design",
       mockImg: "PlantaeProfile.webp",
+      mockImgAlt: "PlantaeProfile.png",
       mockURL: "",
       projectOverview: [
         {
@@ -199,6 +227,16 @@ export const projects = {
         "PlantaeCard.webp",
         "PlantaeFooter.webp",
       ],
+      highFidelityDesktopPrototypeAlt: [
+        "PlantaeHome.png",
+        "PlantaeAbout.png",
+        "PlantaeStore.png",
+        "PlantaeDropdown.png",
+        "PlantaeProduct.png",
+        "PlantaeStore2.png",
+        "PlantaeCard.png",
+        "PlantaeFooter.png",
+      ],
     },
   },
   interactionMotion: {
@@ -233,6 +271,12 @@ export const projects = {
         "bookXchange3.webp",
         "bookXchange4.webp",
       ],
+      highFidelityPrototypeAlt: [
+        "bookXchange1.png",
+        "bookXchange2.png",
+        "bookXchange3.png",
+        "bookXchange4.png",
+      ],
       motionDesign: {
         textColor: "#fa7c48",
         desc: "Designed on-tap interaction when clicked on a product.",
@@ -246,6 +290,7 @@ export const projects = {
       projectTitle: "MyCard",
       subTitle: "Interaction & Motion Design",
       mockImg: "MyCardProfile.webp",
+      mockImg: "MyCardProfile.png",
       mockURL: "",
       projectOverview: [
         {
@@ -265,6 +310,7 @@ export const projects = {
         },
       ],
       highFidelityPrototype: ["MyCardUI1.webp", "MyCardUI2.webp"],
+      highFidelityPrototype: ["MyCardUI1.png", "MyCardUI2.png"],
       motionDesign: {
         textColor: "#ED94CC",
         desc: "Designed on-tap interaction when clicked on a product.",
