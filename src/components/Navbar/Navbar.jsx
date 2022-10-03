@@ -13,12 +13,11 @@ export const Navbar = () => {
     const handleScroll = () => {
       let currPos = window.scrollY;
       if (currPos > initPos && currPos >= 150) {
-        navbar.classList.add("bg-fade", "toggle-effect");
+        navbar.classList.add("bg-fade");
         initPos = currPos;
       } else if (currPos < 150) {
-        navbar.classList.remove("bg-fade", "toggle-effect");
+        navbar.classList.remove("bg-fade");
       } else {
-        navbar.classList.remove("toggle-effect");
         initPos = currPos;
       }
     };
@@ -37,6 +36,10 @@ export const Navbar = () => {
           <img className="nav-logo" src="/images/hrdkLogo.svg" alt="logo" />
         </a>
         <div className="nav-item-container">
+          <a className="nav-item" href="/">
+            Home
+            <div className="bot-border"></div>
+          </a>
           {!projectName && (
             <a className="nav-item" href="#chat-with-me">
               About

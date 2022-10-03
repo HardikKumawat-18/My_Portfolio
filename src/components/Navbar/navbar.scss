@@ -46,6 +46,10 @@
 
       .dropdown-container {
         position: relative;
+        margin-left: 2rem;
+        .nav-item {
+          margin-left: unset;
+        }
         .dropdown {
           background-color: white;
           border-radius: 4px;

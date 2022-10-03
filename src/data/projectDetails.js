@@ -290,7 +290,7 @@ export const projects = {
       projectTitle: "MyCard",
       subTitle: "Interaction & Motion Design",
       mockImg: "MyCardProfile.webp",
-      mockImg: "MyCardProfile.png",
+      mockImgAlt: "MyCardProfile.png",
       mockURL: "",
       projectOverview: [
         {
@@ -310,7 +310,7 @@ export const projects = {
         },
       ],
       highFidelityPrototype: ["MyCardUI1.webp", "MyCardUI2.webp"],
-      highFidelityPrototype: ["MyCardUI1.png", "MyCardUI2.png"],
+      highFidelityPrototypeAlt: ["MyCardUI1.png", "MyCardUI2.png"],
       motionDesign: {
         textColor: "#ED94CC",
         desc: "Designed on-tap interaction when clicked on a product.",
