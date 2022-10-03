@@ -15,8 +15,7 @@ export const ProjectTemplate2 = () => {
     window.scrollTo(0, 0);
     let interval = setInterval(() => {
       setLoading(false);
-    }, 2000);
-
+    }, 1000);
     return () => {
       if (interval) {
         clearInterval(interval);

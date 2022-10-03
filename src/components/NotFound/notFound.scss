@@ -1,0 +1,30 @@
+.not-found {
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+  .logo {
+    width: 15rem;
+  }
+
+  .lottie-container {
+    width: 40%;
+
+    svg {
+      display: none;
+      &:nth-child(1) {
+        display: unset;
+      }
+    }
+  }
+
+  .content {
+    .std-btn {
+      background-color: #e84a42;
+      margin: 0 1rem;
+    }
+  }
+}
