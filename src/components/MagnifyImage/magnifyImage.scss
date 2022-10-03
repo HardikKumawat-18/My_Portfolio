@@ -1,6 +1,7 @@
 .magnify-image {
   .img-magnifier-container {
     position: relative;
+    cursor: none;
   }
 
   .img-magnifier-glass {
@@ -14,6 +15,7 @@
   }
 
   .user-journey-img {
+    cursor: none;
     display: -webkit-flex;
     width: 60%;
     margin: auto;
