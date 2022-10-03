@@ -1,12 +1,13 @@
 .interest-card {
   align-items: center;
   display: -webkit-flex;
-  gap: 2rem;
+  margin-bottom: 3rem;
 
   .interest-logo {
     width: 5rem;
     height: 5rem;
     object-fit: contain;
+    margin-right: 2rem;
   }
 
   .content {

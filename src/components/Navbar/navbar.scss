@@ -11,7 +11,7 @@
     &,
     .nav-item-container {
       align-items: center;
-      display: -webkit-flex;
+      display: flex;
     }
 
     .nav-logo {
@@ -19,8 +19,6 @@
     }
 
     .nav-item-container {
-      -webkit-column-gap: 2rem;
-      column-gap: 2rem;
       font-family: "Poppins", sans-serif;
       font-size: 1.2rem;
       font-weight: 300;
@@ -31,6 +29,7 @@
       }
 
       .nav-item {
+        margin-left: 2rem;
         .bot-border {
           background-color: black;
           height: 0.03rem;

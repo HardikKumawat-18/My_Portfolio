@@ -24,9 +24,9 @@
         align-items: center;
         width: fit-content;
         display: -webkit-flex;
-        justify-content: flex-start;
-        gap: 15rem;
+        justify-content: space-between;
         position: relative;
+        width: 25rem;
         .wiggly-arrow {
           width: 13rem;
           position: absolute;
