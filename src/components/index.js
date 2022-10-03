@@ -12,6 +12,7 @@ import { PrototypeDesktopCarousel } from "./PrototypeDesktopCarousel/PrototypeDe
 import { Modal } from "./Modal/Modal";
 import { Loading } from "./Loading/Loading";
 import { NotFound } from "./NotFound/NotFound";
+import { MagnifyImage } from "./MagnifyImage/MagnifyImage";
 
 export {
   Navbar,
@@ -29,4 +30,5 @@ export {
   Modal,
   Loading,
   NotFound,
+  MagnifyImage,
 };

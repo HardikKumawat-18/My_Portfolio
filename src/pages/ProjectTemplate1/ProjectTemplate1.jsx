@@ -9,6 +9,7 @@ import {
   Modal,
   PrototypeDesktopCarousel,
   Loading,
+  MagnifyImage,
 } from "../../components";
 import { useParams } from "react-router-dom";
 import { projects, projectsData } from "../../data";
@@ -154,20 +155,9 @@ export const ProjectTemplate1 = () => {
             {projectData.userJourney && (
               <>
                 <h2 className="sub-title">User Journey</h2>
-                {projectData.userJourney.map((item, index) => {
-                  return (
-                    <img
-                      className="user-journey-img"
-                      src={item.pictureImg || item.pictureURL}
-                      alt="User Journey"
-                      key={index}
-                      onClick={() => {
-                        setImgSrc(`${item.pictureImg || item.pictureURL}`);
-                        setModalBool(true);
-                      }}
-                    />
-                  );
-                })}
+                {projectData.userJourney && (
+                  <MagnifyImage images={projectData.userJourney} />
+                )}
               </>
             )}
           </section>

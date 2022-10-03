@@ -1,0 +1,21 @@
+.magnify-image {
+  .img-magnifier-container {
+    position: relative;
+  }
+
+  .img-magnifier-glass {
+    background-color: white;
+    position: absolute;
+    border: 1px solid #000;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 400px;
+    height: 400px;
+  }
+
+  .user-journey-img {
+    display: -webkit-flex;
+    width: 60%;
+    margin: auto;
+  }
+}
