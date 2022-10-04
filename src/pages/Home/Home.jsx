@@ -70,6 +70,9 @@ export const Home = () => {
             <span className="slashed-out">Users</span>
             <span className="floating-text">People</span>
           </span>
+          <video className="video-container" autoPlay muted>
+            <source src="/images/Paper_Airplane.mp4" type="video/mp4" />
+          </video>
         </section>
 
         <section id="chat-with-me" className="chat-with-me">

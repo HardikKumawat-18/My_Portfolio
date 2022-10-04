@@ -1,3 +1,4 @@
+@import "../../util/breakpoints";
 .interest-card {
   align-items: center;
   display: -webkit-flex;
@@ -11,7 +12,7 @@
 
   .content {
     margin-left: 2rem;
-    .interest-title {
+    .title {
       font-weight: 500;
       font-size: 1.5rem;
     }
@@ -19,6 +20,21 @@
       font-weight: 300;
       font-size: 1.2rem;
       width: 70%;
+    }
+  }
+  @include l {
+    flex-direction: column;
+
+    .content {
+      margin: 0;
+      text-align: justify;
+      .title {
+        text-align: center;
+        margin: 0.5rem 0;
+      }
+      .interest-desc {
+        width: unset;
+      }
     }
   }
 }

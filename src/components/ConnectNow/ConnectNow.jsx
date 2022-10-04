@@ -50,11 +50,11 @@ export const ConnectNow = () => {
           <div className="form">
             <div className="form-input">
               <span>Name:</span>
-              <input type="text" placeholder="Enter your name" />
+              <input type="text" placeholder="Name" />
             </div>
             <div className="form-input">
               <span>Email Address:</span>
-              <input type="text" placeholder="Enter your email address" />
+              <input type="text" placeholder="Email address" />
             </div>
             <div className="form-input">
               <span>Write A Message:</span>
@@ -63,19 +63,17 @@ export const ConnectNow = () => {
                 id=""
                 cols="30"
                 rows="5"
-                placeholder="Enter your message"
+                placeholder="Message"
               ></textarea>
             </div>
-            <div>
-              <button className="std-btn">
-                <img
-                  className="wifi-mini-logo"
-                  src="/images/WiFiLogo.svg"
-                  alt="WiFiLogo"
-                />
-                Connect Now
-              </button>
-            </div>
+            <button className="std-btn">
+              <img
+                className="wifi-mini-logo"
+                src="/images/WiFiLogo.svg"
+                alt="WiFiLogo"
+              />
+              Connect Now
+            </button>
           </div>
         </div>
       </div>

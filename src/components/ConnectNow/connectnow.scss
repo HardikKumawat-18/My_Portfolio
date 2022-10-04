@@ -1,3 +1,4 @@
+@import "../../util/breakpoints";
 .connect-now {
   margin-top: 10rem;
   .contact-form {
@@ -61,7 +62,6 @@
         top: 20rem;
         opacity: 0;
         flex-wrap: wrap;
-        gap: 1rem;
         transform: translateY(-2rem);
         transition: transform 0.7s ease-in-out, opacity 0.4s ease-out 0.1s;
         position: absolute;
@@ -90,9 +90,12 @@
           &:nth-child(2) {
             flex: 1;
           }
-          &:nth-child(3),
-          &:nth-child(4) {
+          &:nth-child(1) {
+            margin-right: 1rem;
+          }
+          &:nth-child(3) {
             width: 100%;
+            margin: 1rem 0;
           }
         }
         .std-btn {
@@ -106,6 +109,58 @@
           opacity: 1;
           transform: translateY(0);
           z-index: 2;
+        }
+      }
+    }
+
+    @include breakpoint(1200px) {
+      height: 35rem;
+      &,
+      .content {
+        flex-direction: column;
+        align-items: center;
+        .wifi-symbol {
+          top: -10rem;
+          right: 0;
+          margin: 0 auto;
+        }
+
+        .form {
+          &.active {
+            transform: translateY(0);
+          }
+        }
+      }
+      .content {
+        width: 40rem;
+        .lower {
+          text-align: center;
+        }
+
+        .form {
+          .std-btn {
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    @include l {
+      .content {
+        .form {
+          .form-input {
+            &:nth-child(1),
+            &:nth-child(2) {
+              flex: unset;
+              width: 100%;
+            }
+            &:nth-child(1) {
+              margin-right: 0;
+            }
+            &:nth-child(2) {
+              margin-top: 1rem;
+            }
+          }
         }
       }
     }

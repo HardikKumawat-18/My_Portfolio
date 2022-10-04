@@ -1,3 +1,4 @@
+@import "../../util/breakpoints";
 .footer {
   max-width: unset;
   background-image: url("../../../public/images/FooterBg.png");
@@ -25,5 +26,9 @@
     right: 4rem;
     width: 3rem;
     transform: translateY(-5rem);
+  }
+
+  @include l {
+    padding: 25rem 0 0;
   }
 }

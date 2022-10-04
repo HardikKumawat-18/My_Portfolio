@@ -18,8 +18,7 @@ export const projectsData = [
     projectType: "interaction-motion",
     title: "Book Xchange",
     Subtitle: "Interaction & Motion Design",
-    description:
-      "Designed interactions for a book rental cum sale app (pet project)",
+    description: "Designed interactions for a book rental cum sale app",
     btnColor: "#0FABD8",
   },
   {
@@ -30,8 +29,7 @@ export const projectsData = [
     projectType: "interaction-motion",
     title: "MyCard",
     Subtitle: "Interaction & Motion Design",
-    description:
-      "Designed interactions for a personal finance dashboard (pet project)",
+    description: "Designed interactions for a personal finance dashboard",
     btnColor: "#FFA935",
   },
   {

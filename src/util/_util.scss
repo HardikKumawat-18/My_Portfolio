@@ -1,3 +1,4 @@
+@import "./breakpoints";
 h1,
 h2,
 h3,
@@ -12,16 +13,29 @@ p {
 .title {
   font-size: 1.5rem;
   font-weight: 500;
+  @include xl {
+    font-size: 1.4rem;
+  }
 }
 .desc {
   font-size: 1.1rem;
   font-weight: 300;
+  @include xl {
+    font-size: 1.4rem;
+  }
 }
 
 .max-w-container {
   max-width: 1440px;
   margin: auto;
   padding: 2rem 12rem;
+
+  @include xl {
+    padding: 2rem 6rem;
+  }
+  @include l {
+    padding: 2rem 4rem;
+  }
 }
 
 // Buttons
