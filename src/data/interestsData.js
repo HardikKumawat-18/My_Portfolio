@@ -2,14 +2,14 @@ export const interestsData = [
   {
     title: "Design",
     description:
-      "I passionate about designing and not just designing but creative and innovative designing. I like working multidisciplinary design projects. I like working as a motion artist as well.",
+      "I am passionate about designing and not just designing but creative and innovative designing. I like working multidisciplinary design projects. I like working as a motion artist as well.",
     imgUrl: "",
     imgName: "DesignLogo",
   },
   {
     title: "Anything Art related",
     description:
-      "I love painting, sketching, crafting, visualizing and imagining various forms of art. Being a artist I like to explore more mediums of expressing my thoughts.",
+      "I love painting, sketching, crafting, visualizing and imagining various forms of art. Being an artist I like to explore more mediums of expressing my thoughts.",
     imgUrl: "",
     imgName: "ArtLogo",
   },

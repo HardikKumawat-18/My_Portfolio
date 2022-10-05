@@ -56,25 +56,25 @@ export const projects = {
       ],
       userResearch:
         "After a series of interviews and research it came across that users were unhappy with the current medical system (in India). People had to run around for booking appointments and wait in pharmacy queues. In some cases, people even faced problems in traveling to the clinics due to medical conditions. Given below are 2 user personas:",
-      userResearchImages: [],
+      userResearchImages: ["JudePersona.jpg", "MarthaPersona.jpg"],
       problemIdentification: [
         {
-          problemImg: "GamingLogo.png",
+          problemImg: "ExpertMedicalAdvice.png",
           problemURL: "",
           problemDesc: "Inaccessible Expert Medical Advice",
         },
         {
-          problemImg: "GamingLogo.png",
+          problemImg: "AppointmentQueues.png",
           problemURL: "",
           problemDesc: "Endless Appointment Queues",
         },
         {
-          problemImg: "GamingLogo.png",
+          problemImg: "Prescriptions.png",
           problemURL: "",
           problemDesc: "Correct and fastest prescriptions",
         },
         {
-          problemImg: "GamingLogo.png",
+          problemImg: "Unavailability.png",
           problemURL: "",
           problemDesc: "Unavailability of docto",
         },
