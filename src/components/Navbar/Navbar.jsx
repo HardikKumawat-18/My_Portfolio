@@ -7,22 +7,17 @@ import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from "react-icons/hi";
 
 export const Navbar = () => {
   const { projectName } = useParams();
-  const [dropDownBool, setDropDownBool] = useState(false);
-  const itemContainer = useRef(null);
-  const navContainer = useRef(null);
   const nav = useRef(null);
-  const innerDropContainer = useRef(null);
 
   useEffect(() => {
-    let navbar = document.querySelector(".navbar");
     let initPos = 0;
     const handleScroll = () => {
       let currPos = window.scrollY;
-      if (currPos > initPos && currPos >= 150) {
-        navbar.classList.add("bg-fade");
+      if (currPos > initPos && currPos >= 160) {
+        nav.current.classList.add("bg-white");
         initPos = currPos;
-      } else if (currPos < 150) {
-        navbar.classList.remove("bg-fade");
+      } else if (currPos < 160) {
+        nav.current.classList.remove("bg-white");
       } else {
         initPos = currPos;
       }
@@ -36,93 +31,50 @@ export const Navbar = () => {
   });
 
   return (
-    <div className="navbar" ref={nav}>
-      <div className="nav__container" ref={navContainer}>
+    <nav className="navbar" ref={nav}>
+      <div className="nav__container">
         <a href="/">
-          <img className="nav-logo" src="/images/hrdkLogo.svg" alt="logo" />
+          <img src="/images/hrdkLogo.svg" alt="" className="logo" />
         </a>
-        <div className="nav-item-container" ref={itemContainer}>
-          <a
-            className="nav-item"
-            href="/"
-            onClick={() => {
-              setDropDownBool(false);
-            }}
-          >
-            Home
+        <div className="nav-items">
+          <span className="nav-item">
+            <a href="/">Home</a>
             <div className="bot-border"></div>
-          </a>
+          </span>
           {!projectName && (
-            <a
-              className="nav-item"
-              href="#chat-with-me"
-              onClick={() => {
-                setDropDownBool(false);
-              }}
-            >
-              About
+            <span className="nav-item">
+              <a href="#chat-with-me">About</a>
               <div className="bot-border"></div>
-            </a>
+            </span>
           )}
-          <div className="dropdown-container" ref={innerDropContainer}>
-            <a
-              className="nav-item"
-              href="#my-projects"
-              onClick={() => {
-                setDropDownBool(false);
-              }}
-            >
-              Projects
-              <div className="bot-border"></div>
-            </a>
-            <div className="dropdown">
-              {projectsData.map((item, index) => {
+          <span className="nav-item dropdown-container">
+            <a href="#my-projects">Projects</a>
+            <div className="bot-border"></div>
+            <div className="nav-dropdown">
+              {projectsData.map((project, index) => {
                 return (
-                  <a
-                    href={`/project/${item.projectType}/${camelCase(
-                      item.title.toLowerCase()
-                    )}`}
-                    className="nav-item"
-                    key={index}
-                  >
-                    {item.title}
-                    <div className="bot-border"></div>
-                  </a>
+                  <span className="nav-item" key={index}>
+                    <a
+                      href={`/project/${project.projectType}/${camelCase(
+                        project.title.toLowerCase()
+                      )}`}
+                    >
+                      {project.title}
+                    </a>
+                  </span>
                 );
               })}
             </div>
-          </div>
-          <a
-            className="nav-item"
-            href="#connect-now"
-            onClick={() => {
-              setDropDownBool(false);
-            }}
-          >
-            Connect Now
+          </span>
+          <span className="nav-item">
+            <a href="#connect-now">Connect Now</a>
             <div className="bot-border"></div>
-          </a>
+          </span>
         </div>
-        {dropDownBool ? (
-          <HiOutlineMenuAlt3
-            className="hamburger-menu"
-            onClick={() => {
-              setDropDownBool(!dropDownBool);
-              itemContainer.current.classList.remove(`show`);
-              nav.current.classList.remove(`open`);
-            }}
-          />
-        ) : (
-          <HiOutlineMenuAlt2
-            className="hamburger-menu"
-            onClick={() => {
-              setDropDownBool(!dropDownBool);
-              itemContainer.current.classList.add(`show`);
-              nav.current.classList.add(`open`);
-            }}
-          />
-        )}
+
+        <HiOutlineMenuAlt2 className="hamburger-icon" />
+        <HiOutlineMenuAlt3 className="hamburger-icon" />
       </div>
-    </div>
+    </nav>
   );
 };

@@ -5,19 +5,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <div className="nav__container">
-        <a href="/">
-          <img className="nav-logo" src="/images/hrdkLogo.svg" alt="logo" />
-        </a>
-        <div className="nav-item-container">
-          <a className="nav-item" href="/#chat-with-me">
-            About
-            <div className="bot-border"></div>
-          </a>
-          <a className="nav-item" href="/#my-projects">
-            Projects
-            <div className="bot-border"></div>
-          </a>
-        </div>
+        Email
         <img
           className="scroll-top"
           src="/images/backToTop.svg"
