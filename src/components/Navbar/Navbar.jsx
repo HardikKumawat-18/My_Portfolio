@@ -7,7 +7,17 @@ import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from "react-icons/hi";
 
 export const Navbar = () => {
   const { projectName } = useParams();
+  const [navBool, setNavBool] = useState(false);
   const nav = useRef(null);
+
+  const openNavMobile = () => {
+    setNavBool(!navBool);
+    nav?.current?.classList.add(`open`);
+  };
+  const closeNavMobile = () => {
+    setNavBool(!navBool);
+    nav?.current?.classList.remove(`open`);
+  };
 
   useEffect(() => {
     let initPos = 0;
@@ -72,8 +82,17 @@ export const Navbar = () => {
           </span>
         </div>
 
-        <HiOutlineMenuAlt2 className="hamburger-icon" />
-        <HiOutlineMenuAlt3 className="hamburger-icon" />
+        {navBool ? (
+          <HiOutlineMenuAlt2
+            className="hamburger-icon"
+            onClick={closeNavMobile}
+          />
+        ) : (
+          <HiOutlineMenuAlt3
+            className="hamburger-icon"
+            onClick={openNavMobile}
+          />
+        )}
       </div>
     </nav>
   );
