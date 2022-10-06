@@ -1,3 +1,5 @@
+@import "../../util/breakpoints";
+
 .feedback {
   display: -webkit-flex;
   .feedback-card {
@@ -11,9 +13,16 @@
     margin: 1rem 0;
     padding: 2rem;
     width: 80%;
+    @include l {
+      flex-direction: column;
+      text-align: center;
+    }
     .content {
       h2 {
         text-align: left;
+        @include l {
+          text-align: center;
+        }
       }
     }
     .user-name,
@@ -33,5 +42,8 @@
   }
   .empty {
     flex: 1;
+    @include lp {
+      display: none;
+    }
   }
 }
