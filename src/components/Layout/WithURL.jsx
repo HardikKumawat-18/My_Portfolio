@@ -12,7 +12,7 @@ export const WithURL = () => {
         <Navbar />
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

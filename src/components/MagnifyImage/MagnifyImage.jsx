@@ -49,7 +49,7 @@ export const MagnifyImage = ({ images }) => {
         y = h / zoom;
       }
       /* Set the position of the magnifier glass: */
-      glass.style.left = x - w + 256 + "px";
+      glass.style.left = x - w + "px";
       glass.style.top = y - h + "px";
       /* Display what the magnifier glass "sees": */
       glass.style.backgroundPosition =

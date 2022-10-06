@@ -115,21 +115,24 @@ export const ProjectTemplate1 = () => {
                 <p className="desc">{projectData.userResearch}</p>
               </>
             )}
-            {projectData.userResearchImages && (
-              <div className="research-img-container">
-                {projectData.userResearchIImages &&
-                  projectData.userResearchIImages.map((image, index) => {
-                    return (
+            <div className="research-img-container">
+              {projectData.userResearchImages &&
+                projectData.userResearchImages.map((image, index) => {
+                  return (
+                    <div className="img-container" key={index}>
                       <img
                         className="user-research-img"
-                        src={`/images/user-research/${image}`}
+                        src={`/images/${image}`}
+                        onClick={() => {
+                          setModalBool(true);
+                          setImgSrc(`/images/${image}`);
+                        }}
                         alt="user-reasearch-img"
-                        key={index}
                       />
-                    );
-                  })}
-              </div>
-            )}
+                    </div>
+                  );
+                })}
+            </div>
 
             {projectData.problemIdentification && (
               <>
@@ -138,12 +141,14 @@ export const ProjectTemplate1 = () => {
                   {projectData.problemIdentification.map((problem, index) => {
                     return (
                       <div className="problem" key={index}>
-                        <img
-                          src={`/images/${
-                            problem.problemImg || problem.problemURL
-                          }`}
-                          alt=""
-                        />
+                        <div className="img-container">
+                          <img
+                            src={`/images/${
+                              problem.problemImg || problem.problemURL
+                            }`}
+                            alt=""
+                          />
+                        </div>
                         <p className="desc">{problem.problemDesc}</p>
                       </div>
                     );

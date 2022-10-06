@@ -128,6 +128,7 @@
         opacity: 0;
         visibility: visible;
         transition: all 0.5s ease-in-out;
+        z-index: -5;
 
         .dropdown-container {
           height: 13rem;
@@ -145,6 +146,7 @@
           width: 100%;
           opacity: 1;
           visibility: visible;
+          z-index: 1;
 
           .dropdown-container {
             .dropdown {
@@ -158,10 +160,15 @@
             .nav-item:hover ~ .dropdown,
             .dropdown:hover {
               box-shadow: none;
+              transform: unset;
             }
           }
         }
       }
     }
+  }
+
+  @include md {
+    padding: 1rem 0;
   }
 }

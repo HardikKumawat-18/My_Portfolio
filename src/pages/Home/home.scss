@@ -35,12 +35,19 @@
 
     a {
       margin: 5rem auto 1rem;
+
+      @include md {
+        margin: 1rem auto;
+      }
     }
 
     .red-text {
       color: red;
       font-size: 1.3rem;
       font-weight: 600;
+      @include md {
+        font-size: 1rem;
+      }
     }
     .title {
       font-size: 5rem;
@@ -48,6 +55,12 @@
       margin: 0;
       @include xl {
         font-size: 4rem;
+      }
+      @include l {
+        font-size: 3rem;
+      }
+      @include breakpoint(375px) {
+        font-size: 2.5rem;
       }
     }
 
@@ -91,6 +104,7 @@
         font-size: 1.6rem;
       }
       @include l {
+        font-size: 1rem;
         text-align: justify;
       }
     }
@@ -112,6 +126,10 @@
       .red {
         background-color: #e84a42;
         color: white;
+      }
+      @include md {
+        font-size: 0.8rem;
+        margin: auto;
       }
     }
 
@@ -136,6 +154,19 @@
       @include xl {
         font-size: 2rem;
       }
+      @include l {
+        font-size: 1.5rem;
+      }
+      @include breakpoint(550px) {
+        font-size: 1rem;
+        margin: 2rem auto;
+      }
+      @include md {
+        .floating-text {
+          top: -1rem;
+          right: -2rem;
+        }
+      }
     }
 
     .video-container {
@@ -149,6 +180,12 @@
 
     @include lp {
       margin-top: 8rem;
+    }
+    @include l {
+      margin-top: 4rem;
+    }
+    @include md {
+      margin-top: 0;
     }
   }
 
