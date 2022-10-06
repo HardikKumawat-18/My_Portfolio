@@ -28,32 +28,42 @@ export const Loading = () => {
           browsers,
           <br />
           <div className="flex">
-            <img
-              className="browser-logo"
-              src="/images/safariLogo.png"
-              alt="chrome-logo"
-            />
-            Safari 15+
-            <img
-              className="browser-logo"
-              src="/images/chromeLogo.png"
-              alt="chrome-logo"
-            />
-            Google Chrome
-            <img
-              className="browser-logo"
-              src="/images/firefoxLogo.png"
-              alt=""
-            />
-            FireFox
-            <img className="browser-logo" src="/images/edgeLogo.png" alt="" />
-            Microsoft Edge
-            <img
-              className="browser-logo"
-              src="/images/braveLogo.png"
-              alt="brave-logo"
-            />
-            Brave
+            <div className="flex-inner">
+              <img
+                className="browser-logo"
+                src="/images/safariLogo.png"
+                alt="chrome-logo"
+              />
+              Safari 15+
+            </div>
+            <div className="flex-inner">
+              <img
+                className="browser-logo"
+                src="/images/chromeLogo.png"
+                alt="chrome-logo"
+              />
+              Google Chrome
+            </div>
+            <div className="flex-inner">
+              <img
+                className="browser-logo"
+                src="/images/firefoxLogo.png"
+                alt=""
+              />
+              FireFox
+            </div>
+            <div className="flex-inner">
+              <img className="browser-logo" src="/images/edgeLogo.png" alt="" />
+              Microsoft Edge
+            </div>
+            <div className="flex-inner">
+              <img
+                className="browser-logo"
+                src="/images/braveLogo.png"
+                alt="brave-logo"
+              />
+              Brave
+            </div>
           </div>
         </div>
       </div>

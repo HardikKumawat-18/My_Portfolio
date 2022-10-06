@@ -9,14 +9,15 @@ export const Navbar = () => {
   const { projectName } = useParams();
   const [navBool, setNavBool] = useState(false);
   const nav = useRef(null);
+  const navItems = useRef(null);
 
   const openNavMobile = () => {
     setNavBool(!navBool);
-    nav?.current?.classList.add(`open`);
+    navItems?.current?.classList.add(`open`);
   };
   const closeNavMobile = () => {
     setNavBool(!navBool);
-    nav?.current?.classList.remove(`open`);
+    navItems?.current?.classList.remove(`open`);
   };
 
   useEffect(() => {
@@ -46,7 +47,7 @@ export const Navbar = () => {
         <a href="/">
           <img src="/images/hrdkLogo.svg" alt="" className="logo" />
         </a>
-        <div className="nav-items">
+        <div className="nav-items" ref={navItems}>
           <span className="nav-item">
             <a href="/">Home</a>
             <div className="bot-border"></div>
