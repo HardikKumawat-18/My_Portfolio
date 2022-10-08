@@ -4,6 +4,7 @@ import { projectsData } from "../../data";
 import { camelCase } from "lodash";
 import { useParams } from "react-router-dom";
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from "react-icons/hi";
+import { BsChevronDown } from "react-icons/bs";
 
 export const Navbar = () => {
   const { projectName } = useParams();
@@ -49,18 +50,28 @@ export const Navbar = () => {
         </a>
         <div className="nav-items" ref={navItems}>
           <span className="nav-item">
-            <a href="/">Home</a>
-            <div className="bot-border"></div>
+            <a href="/">
+              Home
+              <div className="bot-border"></div>
+            </a>
           </span>
           {!projectName && (
             <span className="nav-item">
-              <a href="#chat-with-me">About</a>
-              <div className="bot-border"></div>
+              <a href="#chat-with-me">
+                About
+                <div className="bot-border"></div>
+              </a>
             </span>
           )}
           <span className="nav-item dropdown-container">
-            <a href="#my-projects">Projects</a>
-            <div className="bot-border"></div>
+            <a href="#my-projects">
+              <span style={{ display: "-webkit-flex", alignItems: "center" }}>
+                Projects
+                <BsChevronDown style={{ marginLeft: "7px" }} />
+              </span>
+              <div className="bot-border"></div>
+            </a>
+
             <div className="nav-dropdown">
               {projectsData.map((project, index) => {
                 return (
@@ -78,8 +89,10 @@ export const Navbar = () => {
             </div>
           </span>
           <span className="nav-item">
-            <a href="#connect-now">Connect Now</a>
-            <div className="bot-border"></div>
+            <a href="#connect-now">
+              Connect Now
+              <div className="bot-border"></div>
+            </a>
           </span>
         </div>
 

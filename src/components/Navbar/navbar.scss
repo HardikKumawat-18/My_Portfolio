@@ -22,6 +22,9 @@
     .nav-items {
       display: -webkit-flex;
       margin-left: auto;
+      @include l {
+        font-weight: 600;
+      }
       .nav-item {
         display: -webkit-flex;
         flex-direction: column;
@@ -29,19 +32,27 @@
         margin-left: 2rem;
         width: fit-content;
         a {
+          display: -webkit-flex;
+          flex-direction: column;
+        }
+        a {
           text-decoration: none;
           color: black;
-          &:hover ~ .bot-border {
-            width: 90%;
+          width: fit-content;
+          &:hover {
+            .bot-border {
+              width: 90%;
+            }
+          }
+          .bot-border {
+            background-color: black;
+            display: inline-flex;
+            height: 2px;
+            width: 0;
+            transition: width 0.3s ease-in-out;
           }
         }
-        .bot-border {
-          background-color: black;
-          display: inline-flex;
-          height: 2px;
-          width: 0;
-          transition: width 0.3s ease-in-out;
-        }
+
         @include l {
           font-weight: 300;
         }
@@ -75,6 +86,9 @@
           visibility: hidden;
           opacity: 0;
           z-index: -3;
+          @include l {
+            align-items: flex-end;
+          }
           .nav-item {
             margin-left: 0;
             margin-bottom: 0.5rem;
@@ -85,10 +99,34 @@
             &:hover {
               transform: scale(0.95);
             }
+            @include l {
+              font-size: 1rem;
+            }
+            @include md {
+              font-size: 0.75rem;
+            }
           }
 
           @include l {
-            display: none;
+            box-shadow: unset;
+            position: relative;
+            padding: 0;
+            height: 0;
+            top: 0;
+            transition: height 0.5s ease-in-out, opacity ease-in-out;
+            .nav-item {
+              margin-right: 0;
+            }
+          }
+        }
+        @include l {
+          & a:hover ~ .nav-dropdown,
+          .nav-dropdown:hover {
+            padding: 1rem;
+            height: fit-content;
+            .nav-item {
+              margin-right: 0;
+            }
           }
         }
       }
@@ -121,6 +159,7 @@
         transition: all 0.5s ease-in-out;
         .nav-item {
           margin-right: 2.5rem;
+          align-items: flex-end;
         }
 
         &.open {
