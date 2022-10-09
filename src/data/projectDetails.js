@@ -318,17 +318,17 @@ export const projects = {
       },
     },
     // NovelApp
-    novelApp: {
-      projectLogoImg: "BookxchangeLogo.png",
+    Reedit: {
+      projectLogoImg: "ReeditLogoLogo.png",
       projectLogoURL: "",
-      projectTitle: "Book XChange",
+      projectTitle: "Reedit",
       subTitle: "Interaction & Motion Design",
-      mockImg: "BookxchangeBanner.png",
+      mockImg: "ReetitBanner.png",
       mockURL: "",
       projectOverview: [
         {
           title: "Project Overview",
-          desc: "Book Xchange is a mobile first application to engage people on lending, borrowing and buying books from local readers. The app shares the basic idea of “खुशिया बाटने से बढ़ती है” (Happiness grows when it’s shared). The app gives you a platform to share the books you have already read and give you the chance to explore more content. It works on the simple idea of how ‘Tinder’. The app uses your location and shows the registered users with the books they have uploaded.",
+          desc: "Reedit application for reading books and novel on hand help devices. The app is designed to perform seamless and intuitive interactions giving a real time reading experience. ",
           roles: [],
         },
         {
