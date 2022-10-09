@@ -57,7 +57,7 @@ export const Navbar = () => {
           </span>
           {!projectName && (
             <span className="nav-item">
-              <a href="#chat-with-me">
+              <a href="#chat-with-me" onClick={closeNavMobile}>
                 About
                 <div className="bot-border"></div>
               </a>
@@ -89,7 +89,7 @@ export const Navbar = () => {
             </div>
           </span>
           <span className="nav-item">
-            <a href="#connect-now">
+            <a href="#connect-now" onClick={closeNavMobile}>
               Connect Now
               <div className="bot-border"></div>
             </a>

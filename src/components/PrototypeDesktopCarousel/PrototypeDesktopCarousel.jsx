@@ -28,8 +28,8 @@ export const PrototypeDesktopCarousel = ({ slides }) => {
   });
 
   useEffect(() => {
-    setSlideWidth(track?.querySelector(`.slide`).offsetWidth);
-    setNoOfSlides(track?.querySelectorAll(`.slide`).length);
+    setSlideWidth(track?.querySelector(`.slide`)?.offsetWidth);
+    setNoOfSlides(track?.querySelectorAll(`.slide`)?.length);
     if (noOfSlides % 2 === 0) {
       setInitOffSet(slideWidth / 2 + 16);
     } else {
