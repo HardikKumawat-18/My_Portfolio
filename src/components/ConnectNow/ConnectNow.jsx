@@ -1,17 +1,27 @@
 import { useRef } from "react";
 import "./connectnow.scss";
+import emailjs from "@emailjs/browser";
+import env from "react-dotenv";
 
 export const ConnectNow = () => {
   let form = useRef(null);
   let connectNow = useRef(null);
 
-  // const scrollDown = () => {
-  //   window.scrollBy(form.current.offsetHeight);
-  // };
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  // const scrollUp = () => {
-  //   window.scrollBy(-form.current.offsetHeight);
-  // };
+    emailjs
+      .sendForm(env.SERVICE_ID, env.TEMPLATE_ID, form.current, env.PUBLIC_KEY)
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
 
   return (
     <section id="connect-now" className="connect-now" ref={connectNow}>
@@ -61,26 +71,30 @@ export const ConnectNow = () => {
               Drop me a line!
             </h3>
           </div>
-          <div className="form" ref={form}>
+          <form className="form" ref={form} onSubmit={sendEmail}>
             <div className="form-input">
               <span>Name:</span>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Name" name="user_name" />
             </div>
             <div className="form-input">
               <span>Email Address:</span>
-              <input type="text" placeholder="Email address" />
+              <input
+                type="text"
+                placeholder="Email address"
+                name="user_email"
+              />
             </div>
             <div className="form-input">
               <span>Write A Message:</span>
               <textarea
-                name=""
+                name="message"
                 id=""
                 cols="30"
                 rows="5"
                 placeholder="Message"
               ></textarea>
             </div>
-            <button className="std-btn">
+            <button className="std-btn" type="submit">
               <img
                 className="wifi-mini-logo"
                 src="/images/WiFiLogo.svg"
@@ -88,7 +102,7 @@ export const ConnectNow = () => {
               />
               Connect Now
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
