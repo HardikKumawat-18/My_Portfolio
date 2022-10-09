@@ -5,7 +5,9 @@ export const Footer = () => {
   return (
     <div className="footer">
       <div className="nav__container">
-        Email
+        <a className="nav__email" href="mailto:hardik.kumawat007@gmail.com">
+          hardik.kumawat007@gmail.com
+        </a>
         <img
           className="scroll-top"
           src="/images/backToTop.svg"
