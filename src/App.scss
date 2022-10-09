@@ -17,6 +17,16 @@ body {
   &::-webkit-scrollbar-thumb {
     background-color: #e84a42;
   }
+  &::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: #e84a42;
+  }
+
+  &::selection {
+    color: white;
+    background: #e84a42;
+  }
 }
 
 .App {

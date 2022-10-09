@@ -63,9 +63,11 @@ export const Carousel = ({ children }) => {
         className="carousel-track"
         style={{
           transform: `translateX(-${
-            (activeIndex >= Children.count(children) - 2
-              ? Children.count(children) - 3
-              : activeIndex) * (windowRes <= 425 ? 100 : 35)
+            windowRes > 425
+              ? (activeIndex >= Children.count(children) - 2
+                  ? Children.count(children) - 3
+                  : activeIndex) * 35
+              : activeIndex * 100
           }%)`,
         }}
         {...handlers}
