@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+import { useSwipeable } from "react-swipeable";
 import "./prototypeDesktopCarousel.scss";
 
 export const PrototypeDesktopCarousel = ({ slides }) => {
@@ -20,6 +21,11 @@ export const PrototypeDesktopCarousel = ({ slides }) => {
       setActiveIndex(0);
     }
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => updateIndex(activeIndex + 1),
+    onSwipedRight: () => updateIndex(activeIndex - 1),
+  });
 
   useEffect(() => {
     setSlideWidth(track?.querySelector(`.slide`).offsetWidth);
@@ -47,7 +53,7 @@ export const PrototypeDesktopCarousel = ({ slides }) => {
           className="arrow right"
         />
       </div>
-      <div className="track-container">
+      <div className="track-container" {...handlers}>
         <div
           className="track"
           style={{

@@ -1,3 +1,4 @@
+@import "../../util/breakpoints";
 .prototype-desktop-carousel {
   position: relative;
 
@@ -19,6 +20,9 @@
         cursor: pointer;
         transform: scale(1.25);
       }
+    }
+    @include lp {
+      display: none;
     }
   }
   .track-container {

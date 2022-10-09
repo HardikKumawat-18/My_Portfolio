@@ -119,8 +119,6 @@ export const ProjectTemplate2 = () => {
                   <iframe
                     title={projectData.videoTitle}
                     className="video"
-                    width="320"
-                    height="670"
                     src={`https://www.youtube.com/embed/${projectData.motionDesign.embeddedLink}`}
                     frameBorder="0"
                   ></iframe>
