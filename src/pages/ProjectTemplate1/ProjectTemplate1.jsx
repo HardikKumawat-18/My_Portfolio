@@ -12,7 +12,7 @@ import {
   MagnifyImage,
 } from "../../components";
 import { useParams } from "react-router-dom";
-import { projects, projectsData } from "../../data";
+import { projects } from "../../data";
 import { useEffect, useState } from "react";
 
 export const ProjectTemplate1 = () => {
@@ -169,7 +169,7 @@ export const ProjectTemplate1 = () => {
 
           <section id="prototyping" className="prototyping">
             <h2 className="sub-title">Prototyping</h2>
-            {projectsData.wireframes && (
+            {projectData.wireframes && (
               <>
                 <h2 className="sub-title">Wireframes</h2>
                 <HorizontalDrag

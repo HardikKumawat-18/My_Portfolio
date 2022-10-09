@@ -1,3 +1,4 @@
+@import "../../util/breakpoints";
 @import "../ProjectTemplate1/projecttemplate.scss";
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
@@ -40,14 +41,37 @@
           position: relative;
           .mobile-mockup {
             position: absolute;
-            width: 100%;
-            right: 5rem;
-            top: -1.25rem;
+            height: 105%;
+            margin-left: auto;
+            right: 8.01rem;
+            top: -1.3rem;
             pointer-events: none;
           }
           .video {
             border-radius: 25px;
+            width: 320px;
+            height: 700px;
           }
+        }
+        @include lp {
+          margin-top: 5rem;
+          .mobile-wrapper {
+            width: fit-content;
+            .mobile-mockup {
+              right: -1.5rem;
+              top: -1rem;
+            }
+            .video {
+              width: 255px;
+              height: 550px;
+            }
+          }
+        }
+      }
+      @include lp {
+        flex-direction: column;
+        .left {
+          text-align: center;
         }
       }
     }

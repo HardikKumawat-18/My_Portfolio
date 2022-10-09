@@ -1,8 +1,20 @@
+import { useRef } from "react";
 import "./connectnow.scss";
 
 export const ConnectNow = () => {
+  let form = useRef(null);
+  let connectNow = useRef(null);
+
+  // const scrollDown = () => {
+  //   window.scrollBy(form.current.offsetHeight);
+  // };
+
+  // const scrollUp = () => {
+  //   window.scrollBy(-form.current.offsetHeight);
+  // };
+
   return (
-    <section id="connect-now" className="connect-now">
+    <section id="connect-now" className="connect-now" ref={connectNow}>
       <div className="contact-form">
         <div className="wifi-symbol">
           <div className="wifi-circle first"></div>
@@ -16,6 +28,7 @@ export const ConnectNow = () => {
               onClick={(e) => {
                 e.target.classList.toggle(`active`);
                 document.querySelector(".form").classList.toggle("active");
+                form.current.scrollIntoView();
               }}
               className="toggle-track"
             >
@@ -24,6 +37,7 @@ export const ConnectNow = () => {
                   document
                     .querySelector(".toggle-track")
                     .classList.toggle("active");
+                  form.current.scrollIntoView();
                 }}
                 className="toggle-btn"
               ></div>
@@ -47,7 +61,7 @@ export const ConnectNow = () => {
               Drop me a line!
             </h3>
           </div>
-          <div className="form">
+          <div className="form" ref={form}>
             <div className="form-input">
               <span>Name:</span>
               <input type="text" placeholder="Name" />

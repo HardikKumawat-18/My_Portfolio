@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+import { useSwipeable } from "react-swipeable";
 import "./prototypeDesktopCarousel.scss";
 
 export const PrototypeDesktopCarousel = ({ slides }) => {
@@ -21,9 +22,14 @@ export const PrototypeDesktopCarousel = ({ slides }) => {
     }
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => updateIndex(activeIndex + 1),
+    onSwipedRight: () => updateIndex(activeIndex - 1),
+  });
+
   useEffect(() => {
-    setSlideWidth(track?.querySelector(`.slide`).offsetWidth);
-    setNoOfSlides(track?.querySelectorAll(`.slide`).length);
+    setSlideWidth(track?.querySelector(`.slide`)?.offsetWidth);
+    setNoOfSlides(track?.querySelectorAll(`.slide`)?.length);
     if (noOfSlides % 2 === 0) {
       setInitOffSet(slideWidth / 2 + 16);
     } else {
@@ -47,7 +53,7 @@ export const PrototypeDesktopCarousel = ({ slides }) => {
           className="arrow right"
         />
       </div>
-      <div className="track-container">
+      <div className="track-container" {...handlers}>
         <div
           className="track"
           style={{

@@ -1,7 +1,13 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, ProjectTemplate1, ProjectTemplate2 } from "./pages";
-import { Loading, NotFound, WithoutURL, WithURL } from "./components";
+import {
+  Loading,
+  NotFound,
+  PrototypeDesktopCarousel,
+  WithoutURL,
+  WithURL,
+} from "./components";
 
 function App() {
   return (
@@ -21,6 +27,7 @@ function App() {
             </Route>
           </Route>
           <Route path="/loading" element={<Loading />} />
+          <Route path="/carousel" element={<PrototypeDesktopCarousel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

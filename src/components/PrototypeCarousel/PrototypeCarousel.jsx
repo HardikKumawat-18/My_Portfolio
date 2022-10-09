@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import "./prototypecarousel.scss";
 
 export const PrototypeCarousel = ({ slides }) => {
@@ -11,8 +12,19 @@ export const PrototypeCarousel = ({ slides }) => {
   let slideBy = slideWidth + 32;
 
   const updateIndex = (newIndex) => {
-    setActiveIndex(newIndex);
+    if (newIndex < 0) {
+      setActiveIndex(noOfSlides - 1);
+    } else if (newIndex < noOfSlides) {
+      setActiveIndex(newIndex);
+    } else {
+      setActiveIndex(0);
+    }
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => updateIndex(activeIndex + 1),
+    onSwipedRight: () => updateIndex(activeIndex - 1),
+  });
 
   useEffect(() => {
     setSlideWidth(track?.querySelector(`.slide`).offsetWidth);
@@ -26,7 +38,7 @@ export const PrototypeCarousel = ({ slides }) => {
 
   return (
     <div className="prototype-carousel">
-      <div className="track-container">
+      <div className="track-container" {...handlers}>
         <div
           className="track"
           style={{

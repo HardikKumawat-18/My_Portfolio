@@ -1,3 +1,4 @@
+@import "../../util/breakpoints";
 .prototype-desktop-carousel {
   position: relative;
 
@@ -19,6 +20,9 @@
         cursor: pointer;
         transform: scale(1.25);
       }
+    }
+    @include lp {
+      display: none;
     }
   }
   .track-container {
@@ -91,6 +95,48 @@
 
         &.active {
           background-color: grey;
+        }
+      }
+    }
+    @include lp {
+      height: 570px;
+      width: 650px;
+      .mac-img {
+        height: 500px;
+      }
+      .track {
+        height: 440px;
+        .slide {
+          height: 21.5rem;
+          width: 36.5rem;
+        }
+      }
+    }
+    @include l {
+      height: 380px;
+      width: 400px;
+      .mac-img {
+        height: 300px;
+      }
+      .track {
+        height: 295px;
+        .slide {
+          height: 12.6rem;
+          width: 22rem;
+        }
+      }
+    }
+    @include breakpoint(550px) {
+      height: 270px;
+      width: 100%;
+      .mac-img {
+        height: 200px;
+      }
+      .track {
+        height: 222px;
+        .slide {
+          height: 8.5rem;
+          width: 14.5rem;
         }
       }
     }

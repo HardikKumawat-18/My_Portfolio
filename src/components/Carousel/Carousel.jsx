@@ -1,5 +1,8 @@
 import { Children, cloneElement, useEffect, useRef, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import "./carousel.scss";
+
+const windowRes = window.innerWidth;
 
 export const CarouselItem = ({ children, width }) => {
   return (
@@ -23,6 +26,11 @@ export const Carousel = ({ children }) => {
 
     setActiveIndex(newIndex);
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => updateIndex(activeIndex + 1),
+    onSwipedRight: () => updateIndex(activeIndex - 1),
+  });
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -57,12 +65,15 @@ export const Carousel = ({ children }) => {
           transform: `translateX(-${
             (activeIndex >= Children.count(children) - 2
               ? Children.count(children) - 3
-              : activeIndex) * 35
+              : activeIndex) * (windowRes <= 425 ? 100 : 35)
           }%)`,
         }}
+        {...handlers}
       >
         {Children.map(children, (child, index) => {
-          return cloneElement(child, { width: "35%" });
+          return cloneElement(child, {
+            width: `${windowRes <= 425 ? 100 : 35}%`,
+          });
         })}
       </div>
 

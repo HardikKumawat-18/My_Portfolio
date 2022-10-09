@@ -73,6 +73,11 @@ export const MagnifyImage = ({ images }) => {
     }
   }
 
+  function removeMagnify() {
+    let magnifier = document.querySelector(`.img-magnifier-glass`);
+    magnifier.remove();
+  }
+
   return (
     <div className="magnify-image">
       <div className="img-magnifier-container">
@@ -86,6 +91,7 @@ export const MagnifyImage = ({ images }) => {
               onMouseOver={(e) => {
                 magnify(e.target, 3);
               }}
+              onMouseLeave={removeMagnify}
             />
           );
         })}
