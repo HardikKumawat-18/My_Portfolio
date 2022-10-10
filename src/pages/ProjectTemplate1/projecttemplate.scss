@@ -28,7 +28,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     @include lp {
-      flex-direction: column;
+      // flex-direction: column;
     }
   }
 
@@ -39,6 +39,7 @@
       margin: 3rem 0;
       @include lp {
         align-items: center;
+        justify-content: center;
       }
       .left {
         flex: 2;
@@ -97,7 +98,12 @@
       .problem {
         flex: 1;
       }
-      // height: 20rem;
+      @include l {
+        .problem {
+          margin-bottom: 1rem;
+        }
+        flex-direction: column;
+      }
     }
 
     .problem {
@@ -116,6 +122,11 @@
           object-fit: contain;
           object-position: center;
         }
+        @include lp {
+          flex: 1/4;
+          height: 3rem;
+          width: 3rem;
+        }
       }
       align-items: center;
       display: -webkit-flex;
@@ -127,6 +138,12 @@
       }
       @include lp {
         margin-right: 0;
+        .img-container {
+          margin-bottom: 0;
+        }
+        .desc {
+          font-size: 1rem;
+        }
       }
     }
 

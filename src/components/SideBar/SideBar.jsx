@@ -13,7 +13,7 @@ export const SideBar = () => {
           <AiOutlineInstagram className="logo" />
         </a>
         {/* <AiOutlineBehance /> */}
-        <a href="https://www.linkedin.com">
+        <a href="https://www.linkedin.com/in/hardik-kumawat-32a5811aa/">
           <AiFillLinkedin className="logo" />
         </a>
       </div>
