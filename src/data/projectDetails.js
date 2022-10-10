@@ -127,7 +127,7 @@ export const projects = {
           userProfile: "Girl2.png",
           userName: "Vartika R",
           feedback:
-            "Like the idea of the application but would like to know and udedrstand more about the business sustainability",
+            "Like the idea of the application but would like to know and understand more about the business sustainability",
         },
       ],
     },

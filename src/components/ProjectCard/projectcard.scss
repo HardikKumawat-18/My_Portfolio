@@ -42,6 +42,9 @@
     }
     .std-btn {
       margin: 2rem 0;
+      @include l {
+        margin: 2rem auto;
+      }
     }
   }
 

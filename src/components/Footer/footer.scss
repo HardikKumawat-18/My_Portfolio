@@ -1,4 +1,5 @@
 @import "../../util/breakpoints";
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 .footer {
   max-width: unset;
   background-image: url("../../../public/images/FooterBg.png");
@@ -6,6 +7,7 @@
   background-size: (100%);
   background-repeat: no-repeat;
   margin: 0;
+  transform: translateY(2rem);
   padding: 23rem 0 0;
   .nav__container {
     display: flex;
@@ -21,12 +23,8 @@
     }
 
     .copy-right {
-      // position: absolute;
-      // left: 0;
-      // right: 0;
-      // transform: translateY(100%);
+      margin: 1rem 0;
       font-weight: 300;
-      // margin: auto;
       width: 8rem;
     }
     .scroll-top {

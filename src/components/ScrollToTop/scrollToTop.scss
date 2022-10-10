@@ -1,0 +1,26 @@
+@import "../../util/breakpoints";
+.scroll-to-top {
+  bottom: 2rem;
+  display: none;
+  justify-content: flex-end;
+  // left: 0;
+  position: sticky;
+  pointer-events: none;
+  width: 100%;
+  .scroll-top {
+    cursor: pointer;
+    width: 2rem;
+    pointer-events: all;
+    transform: translateX(-2rem);
+  }
+  &.show {
+    display: -webkit-flex;
+  }
+  z-index: 10;
+  @include md {
+    bottom: 1rem;
+    .scroll-top {
+      transform: translateX(-1rem);
+    }
+  }
+}

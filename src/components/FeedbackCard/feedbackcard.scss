@@ -28,7 +28,10 @@
     .user-name,
     .feedback {
       font-size: 1.3rem;
-      font-weight: 400;
+      font-weight: 300;
+      @include md {
+        font-size: 1rem;
+      }
     }
 
     .user-name {

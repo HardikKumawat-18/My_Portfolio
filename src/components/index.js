@@ -13,6 +13,7 @@ import { Modal } from "./Modal/Modal";
 import { Loading } from "./Loading/Loading";
 import { NotFound } from "./NotFound/NotFound";
 import { MagnifyImage } from "./MagnifyImage/MagnifyImage";
+import { ScrollToTop } from "./ScrollToTop/ScrollToTop";
 
 export {
   Navbar,
@@ -31,4 +32,5 @@ export {
   Loading,
   NotFound,
   MagnifyImage,
+  ScrollToTop,
 };
