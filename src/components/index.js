@@ -14,6 +14,7 @@ import { Loading } from "./Loading/Loading";
 import { NotFound } from "./NotFound/NotFound";
 import { MagnifyImage } from "./MagnifyImage/MagnifyImage";
 import { ScrollToTop } from "./ScrollToTop/ScrollToTop";
+import { SideBar } from "./SideBar/SideBar";
 
 export {
   Navbar,
@@ -33,4 +34,5 @@ export {
   NotFound,
   MagnifyImage,
   ScrollToTop,
+  SideBar,
 };

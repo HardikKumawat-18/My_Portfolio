@@ -1,0 +1,33 @@
+@import "../../util/breakpoints";
+.sidebar {
+  // background-color: black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  bottom: 2rem;
+  border-radius: 0 20px 20px 0;
+  left: 0;
+  padding: 1rem;
+  position: sticky;
+  pointer-events: none;
+  width: fit-content;
+  z-index: 7;
+  .socials {
+    display: -webkit-flex;
+    font-size: 2rem;
+    flex-direction: column;
+    .logo {
+      margin: 0.5rem 0;
+      transition: transform 0.2s ease-in-out;
+      pointer-events: all;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    a {
+      color: unset;
+      text-decoration: none;
+    }
+  }
+  @include md {
+    bottom: 1rem;
+  }
+}
