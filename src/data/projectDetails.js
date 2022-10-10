@@ -71,12 +71,12 @@ export const projects = {
         {
           problemImg: "Prescriptions.png",
           problemURL: "",
-          problemDesc: "Correct and fastest prescriptions",
+          problemDesc: "Correct and Fastest Prescriptions",
         },
         {
           problemImg: "Unavailability.png",
           problemURL: "",
-          problemDesc: "Unavailability of docto",
+          problemDesc: "Unavailability of Doctors",
         },
       ],
       userJourney: [
@@ -137,7 +137,7 @@ export const projects = {
       projectLogoURL: "",
       projectTitle: "Plantae",
       subTitle: "User Interface design",
-      mockImg: "PlantaeProfile.webp",
+      mockImg: "PlantaeProfile.png",
       mockImgAlt: "PlantaeProfile.png",
       mockURL: "",
       projectOverview: [
@@ -273,11 +273,11 @@ export const projects = {
     },
     // NovelApp
     reedit: {
-      projectLogoImg: "ReeditLogoLogo.png",
+      projectLogoImg: "ReeditLogo.png",
       projectLogoURL: "",
       projectTitle: "Reedit",
       subTitle: "Interaction & Motion Design",
-      mockImg: "ReetitBanner.png",
+      mockImg: "ReeditBanner.png",
       mockURL: "",
       projectOverview: [
         {
@@ -297,15 +297,15 @@ export const projects = {
         },
       ],
       highFidelityPrototype: [
-        "bookXchange1.png",
-        "bookXchange2.png",
-        "bookXchange3.png",
-        "bookXchange4.png",
+        "Novel1.png",
+        "Novel2.png",
+        "Novel3.png",
+        "Novel4.png",
       ],
       motionDesign: {
-        textColor: "#fa7c48",
+        textColor: "#3A88BB",
         desc: "Designed on-tap interaction when clicked on a product.",
-        embeddedLink: "Z5ccO-V9eNw",
+        embeddedLink: "atXD0R9XE1I",
       },
     },
   },

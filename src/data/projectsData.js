@@ -45,13 +45,13 @@ export const projectsData = [
   },
   {
     thumbnailURL: "",
-    thumbnailImg: "PlantaeBanner.png",
+    thumbnailImg: "ReeditBanner.png",
     logoURL: "",
-    logoImg: "PlantaeLogo.webp",
+    logoImg: "ReeditLogo.png",
     projectType: "interaction-motion",
     title: "Reedit",
     Subtitle: "Interaction & Motion Design",
     description: "Designed interactions for a online reading app",
-    btnColor: "#468B5B",
+    btnColor: "#3A88BB",
   },
 ];
