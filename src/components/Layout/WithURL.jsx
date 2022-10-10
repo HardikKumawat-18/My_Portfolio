@@ -7,10 +7,20 @@ import { ScrollToTop } from "../ScrollToTop/ScrollToTop";
 import { SideBar } from "../SideBar/SideBar";
 
 export const WithURL = () => {
+  let screenWidth = window.innerWidth;
+
   return (
     <>
       <div className="with-url">
-        <img className="url-bar" src="./images/URLDesktop.svg" alt="url-img" />
+        {screenWidth <= 450 ? (
+          <img className="url-bar" src="./images/URLMobile.png" alt="url-img" />
+        ) : (
+          <img
+            className="url-bar"
+            src="./images/URLDesktop.svg"
+            alt="url-img"
+          />
+        )}
         <Navbar />
         <Outlet />
       </div>
