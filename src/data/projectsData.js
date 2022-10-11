@@ -51,7 +51,7 @@ export const projectsData = [
     projectType: "interaction-motion",
     title: "Reedit",
     Subtitle: "Interaction & Motion Design",
-    description: "Designed interactions for a online reading app",
+    description: "Designed interactions for an online reading app",
     btnColor: "#3A88BB",
   },
 ];
